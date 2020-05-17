@@ -1,0 +1,58 @@
+<!-- pages/myCommission/myCommission.wxml -->
+<view class="myCommission">
+  <view class="integral-titile">
+    <view class="titile-box">
+      <image src="{{imgUrl+'list_pic_02@2x.png'}}"></image>
+      <view class="commission-num">{{dataInfor.Balance}}</view>
+      <view class="my-integral">我的佣金</view>
+    </view>
+    <view class="tixian" bindtap="toFN">提现</view>
+  </view>
+  <view class="his-commission">
+    <span class="flexHis">活动总收益:{{dataInfor.IsDrawSplittinTotal}}</span>
+  </view>
+  <view class="his-commission">
+    <span>预计收益总金额:{{dataInfor.ExpectedSplittinTotal }}</span>
+  </view>
+  <view class="seachMT">
+    <view class="seachbg">
+      <input  placeholder="请输入你要搜索的订单号" value="{{seach}}" data-name="seach" bindinput="seaChFN" />
+    </view>
+    <van-button size="small" bindtap="submitComT">搜索</van-button>
+  </view>
+  <scroll-view scrolltolower="150" scroll-y="true" bindscrolltolower="getDataR">
+    <view class="integral-record-box" wx:for="{{dataList}}" wx:key="{{index}}">
+      <view class="topFuInt">
+        <span class="name">订单号：{{item.OrderId}}</span>
+        <span class="val pic">
+          {{item.IsWithDrawText}} {{item.Income?item.Income:item.Expenses}}元
+        </span>
+      </view>
+      <view class="topFuInt">
+        <span class="name">角色：{{item.TradeTypeText}}</span>
+        <span class="val ">
+          修复剂：{{item.IsIncludeRestorer?'1':'0'}} 优惠券：{{item.IsIncludeCoupon?'1':'0'}}
+        </span>
+      </view>
+      <view class="topFuInt mb">
+        <span class="name">门店名称：{{item.StoreName}}</span>
+        <span class="val">用户名称：{{item.UserName}}</span>
+      </view>
+      <image class="yfz" wx:if="{{item.IsWithDrawText!='预计收益'}}" src="{{imgUrl+'yifz.png'}}" />
+      <!-- <view class="integral-record-item">
+      <view class="record-titile">
+        {{item.TradeTypeText}}
+        <view class="record-comp"> -->
+      <!-- <text class="comp-jia">+</text> -->
+      <!-- <text class="comp-jian" wx:if{}>-</text> -->
+      <!-- <text class="comp-num">{{item.Income?'+'+item.Income:'-'+item.Expenses}}</text>
+        </view>
+        <view class="record-info">
+          <text class="record-date">{{item.FinishDate}}</text>
+        </view>
+      </view>
+    </view> -->
+    </view>
+    <view class="noMore" wx:if="{{finsh}}">没有更多的了~~~</view>
+  </scroll-view>
+</view>

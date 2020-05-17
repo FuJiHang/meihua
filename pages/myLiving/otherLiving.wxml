@@ -1,0 +1,94 @@
+<!--pages/myLiving/otherLiving.wxml-->
+<!-- 顶部 -->
+<view class='topContent' style='display:flex;align-items:center;'>
+  <view class='disflex' style='position: relative;width:100%;'>
+    <view class='broadcasrNum'>
+      <image class="uselogo" src="{{otherHead}}"></image>
+    </view>
+    <view class='broadcasrNum'>
+      <text>{{userInfo.ZhiBoTotalCount}}</text>
+      <view class='span'>直播</view>
+    </view>
+    <view class='broadcasrNum'>
+      <text>{{userInfo.LuBoTotalCount}}</text>
+      <view class='span'>录播</view>
+    </view>
+    <view class='broadcasrNum'>
+      <text>{{userInfo.AttentionCount}}</text>
+      <view class='span'>关注</view>
+    </view>
+    <!-- <view class='attention' bindtap='onAttention' data-id='{{userInfo.ZhiBoTotalCount}}'>已关注</view> -->
+  </view>
+</view>
+<view style='background-color:#F5F5F5;width:100%;height:20rpx'></view>
+<!-- tab切换 -->
+<view class="nav" bindtap="selected" style="{{navFlex?'position: fixed;top: 0;':''}}">
+  <view class="{{status == 0?'red':'default'}}" data-status="0">直播</view>
+  <view class="{{status == 1?'red':'default'}}" data-status="1">录播</view>
+</view>
+<!-- 直播列表 -->
+<view class='livingList' hidden="{{status != 0}}">
+  <!-- 列表 -->
+  <view class='listContent' wx:if="{{liveInfo.length > 0}}">
+    <view class='listItem' wx:for="{{liveInfo}}" wx:key="{{item.Id}}">
+      <!-- 内容 -->
+      <view class='disflex' style='padding:15rpx 0;'>
+        <view class='livingLeft'>
+          <image class='image' src="{{item.Image}}"></image>
+          <view class='livingStatus' wx:if="{{item.IsDefault === 1}}">
+            <view class='redDot'></view>
+            <view class='livingStatusText'>直播中</view>
+          </view>
+        </view>
+        <view class='livingRight'>
+          <view class='titleName'>{{item.RoomName}}</view>
+          <view class='nickName'>{{item.UserName}}</view>
+          <view class='startTime'>开播时间:{{item.AdvanceTime}}{{item.ProductList.TotalRecords}}</view>
+          <view class='goodsList disflex' style='justify-content:flex-start' wx:if="{{item.ProductList.TotalRecords > 0}}">
+            <image wx:for="{{item.ProductList.Data}}" class='goodsItem' src="{{item.ImageUrl1}}"></image>
+            <view class='goodsMore' wx:if="{{item.ProductList.TotalRecords > 3}}">
+              <view style='display: table-cell; vertical-align:middle; text-align:center;'>
+                <view style='color:#E95278;font-weight: bold'>+{{item.ProductList.TotalRecords}}</view>
+                <view style='color:#CCCCCC;font-weight: bold'>More</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='defaultStyle' wx:else>
+    暂无信息
+  </view>
+</view>
+<!-- 录播列表 -->
+<view class='livingList' hidden="{{status != 1}}">
+  <view class='listContent' wx:if="{{recordInfo.length > 0}}">
+    <view class='listItem disflex' wx:for="{{recordInfo}}" wx:key="{{item.Id}}" data-id='{{item.Id}}' bindtap='toRecord'>
+      <view class='livingLeft'>
+        <image class='image' src="{{item.Image}}"></image>
+        <view class='livingStatus'>
+          <view class='redDot'></view>
+          <view class='livingStatusText'>轮播中</view>
+        </view>
+      </view>
+      <view class='livingRight'>
+        <view class='titleName'>{{item.RoomName}}</view>
+        <view class='nickName'>{{item.UserName}}</view>
+        <view class='startTime'>首播时间:{{item.AdvanceTime}}</view>
+        <view class='goodsList disflex' style='justify-content:flex-start' wx:if="{{item.ProductList.TotalRecords > 0}}">
+          <image wx:for="{{item.ProductList.Data}}" class='goodsItem' src="{{item.ImageUrl1}}"></image>
+          <view class='goodsMore' wx:if="{{item.ProductList.TotalRecords > 3}}">
+            <view style='display: table-cell; vertical-align:middle; text-align:center;'>
+              <view style='color:#E95278;font-weight: bold'>+{{item.ProductList.TotalRecords}}</view>
+              <view style='color:#CCCCCC;font-weight: bold'>More</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='defaultStyle' wx:else>
+    暂无信息
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/selectTechnician/selectTechnician.wxml-->
+<import src="/template/template.wxml"></import>
+ <radio-group bindchange="checkboxChange">
+      <view class='all_project_item' wx:for="{{10}}" wx:key="{{index}}">
+        <!-- checkbox里的value最好使用项目id -->
+        <radio class='checkbox' value="{{index}}" color="#ff3c5c"/>
+        <template is="technician"></template>
+      </view>
+    </radio-group>
+<view class='under_btn_box'>
+  <view class='under_item'>
+    <text>{{selectTechnician.name?"已选择医师："+selectTechnician.name:"未选择"}}</text>
+  </view>
+  <button class='under_item' bindtap='bindSure'>确定</button>
+</view>

@@ -1,0 +1,60 @@
+/* pages/mySuperior/mySuperior.wxss */
+.person {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.person-title {
+  display: flex;
+  width: 750rpx;
+  height: 199rpx;
+  padding: 40rpx 0 40rpx 30rpx;
+}
+.title-left image {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #0094;
+}
+.title-right {
+  padding-left: 20rpx;
+}
+.title-right .name {
+  padding-top: 6rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 28rpx;
+}
+.person-address-box {
+  display: flex;
+  align-items: center;
+}
+.person-address-box .iconfont {
+  font-size: 24rpx;
+  color: #ffffff;
+  margin-right: 10rpx;
+  padding-top: 8rpx;
+}
+.person-address text {
+  font-size: 24rpx;
+  color: #ffffff;
+  margin: 8rpx;
+}
+
+.person-info-box {
+  padding: 30rpx;
+}
+.person-info-box .info-item {
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666666;
+  font-size: 28rpx;
+  border-bottom: 1px solid #e5e5e5;
+  /* background-color: green; */
+}
+.person-info-box .info-item .info-val {
+  font-size: 26rpx
+}

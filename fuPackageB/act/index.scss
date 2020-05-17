@@ -1,0 +1,807 @@
+page {
+  width: 100%;
+  height: 100%;
+
+  background: rgb(60, 62, 75);
+
+  .padding-30 {
+    padding: 30rpx;
+  }
+
+  .margin-t-30 {
+    margin-top: 30rpx;
+  }
+
+  .margin-b-40 {
+    margin-top: 40rpx;
+  }
+
+  .margin-b-30 {
+    margin-top: 30rpx;
+  }
+
+  .padding-t-50 {
+    padding-top: 50rpx;
+  }
+
+  .margin-t-15 {
+    margin-top: 15rpx;
+  }
+
+  .van-notice-bar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.26) !important;
+    color: #fff !important;
+  }
+
+  .store-info {
+    position: relative;
+    width: 685rpx;
+    height: 1054rpx;
+
+    .detail {
+      position: absolute;
+      width: 568rpx;
+      // height: 283rpx;
+      // padding: 17rpx 40rpx;
+      padding-bottom: 40rpx;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.71);
+      bottom: 98rpx;
+      left: 50%;
+      margin-left: -284rpx;
+
+      .icon {
+        width: 104rpx;
+        height: 107rpx;
+        margin: 0 auto;
+      }
+
+      .name {
+        margin-top: 23rpx;
+        font-size: 55rpx;
+        font-weight: bold;
+      }
+
+      .desc {
+        font-size: 26rpx;
+        margin-top: 20rpx;
+        font-weight: bold;
+        color: rgba(55, 55, 55, 1);
+      }
+    }
+  }
+
+  .act-container {
+    // position: f;
+
+    top: 0;
+    padding: 30rpx 33rpx 5rpx;
+    padding-top: 110rpx;
+
+    &>image {
+      width: 685rpx;
+      border-radius: 20rpx;
+    }
+
+    // .card-swiper swiper-item {
+    //   position: relative;
+    //   left: 5rpx;
+    //   width: 462rpx!important;
+    //   width: 462rpx!important;
+    //   // transform: scale(1)!important;
+    //   image{
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   .detail{
+    //     position: absolute;
+    //     bottom: 0;
+    //     // width:462rpx;
+    //     height:65rpx;
+    //     background:rgba(79,86,96,1);
+    //     border-radius:20rpx;
+    //   }
+    // }
+    .cu-avatar-group {
+      padding: 0;
+      color: #fff;
+
+      .cu-avatar {
+        width: 53rpx;
+        height: 53rpx;
+        margin-left: 0rpx;
+        margin-right: 10rpx;
+      }
+    }
+  }
+}
+
+// .screen-swiper {
+//   width: 750rpx;
+//   height: 462rpx;
+//   border-radius: 20rpx;
+//   swiper-item {
+//     margin-right: 20rpx !important;
+//     width: 462rpx !important;
+//     height: 462rpx !important;
+//     background: rgba(79, 86, 96, 1);
+//     border-radius: 20rpx;
+//   }
+// }
+.slide-container {
+  width: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 30rpx;
+  margin-top: 43rpx;
+  margin-bottom: 44rpx;
+  border-radius: 10rpx;
+
+  .scroll {
+    padding-right: 30rpx;
+    border-radius: 10rpx;
+
+    .have-border {
+      border-bottom: 1rpx solid rgba(237, 237, 237, 1);
+      // &:nth-child(even){
+      //   border: none;
+      // }
+    }
+
+    .scroll-item {
+      position: relative;
+      width: 482rpx !important;
+      border-radius: 20rpx;
+      overflow: hidden;
+
+      .clock {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 64rpx;
+        height: 54rpx;
+        background: rgba(222, 128, 34, 1);
+        border-radius: 20rpx 0 20rpx 0;
+
+        image {
+          width: 24rpx;
+          height: 26rpx;
+        }
+      }
+
+      .img {
+        border-radius: 20rpx;
+        width: 462rpx;
+        height: 462rpx;
+      }
+
+      .content {
+        position: absolute;
+        bottom: 0;
+        height: 65rpx;
+        background: rgba(79, 86, 96, 1);
+        border-radius: 0 0 20rpx 20rpx;
+        width: 462rpx;
+
+        .item-left {
+          font-size: 24rpx;
+          font-family: PingFang SC;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 1);
+          padding: 0 10rpx;
+        }
+
+        .item-right {
+          font-size: 24rpx;
+          font-family: PingFang SC;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 1);
+          padding: 0 10rpx;
+          vertical-align: bottom;
+          /*底对齐*/
+        }
+      }
+
+      .desc {
+        font-size: 26rpx;
+        font-weight: 300;
+        margin-top: 30rpx;
+        color: rgba(153, 153, 153, 1);
+        line-height: 40rpx;
+
+        .ico {
+          width: 24rpx;
+          margin-right: 13rpx;
+        }
+      }
+
+      .cover {
+        // margin-bottom: 24rpx;
+        border-radius: 10rpx;
+        width: 210rpx;
+        height: 160rpx;
+      }
+
+      .image {
+        border-radius: 10rpx;
+        width: 420rpx;
+        height: 220rpx;
+        margin-right: 20rpx;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .pause-btn {
+        width: 80rpx;
+        position: absolute;
+        left: 50%;
+        margin-left: -60rpx;
+        top: 70rpx;
+      }
+    }
+  }
+}
+
+.big-title {
+  color: #fff;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+
+.coupon {
+  display: block;
+  /*按照单元格的样式显示元素*/
+  vertical-align: bottom;
+  /*底对齐*/
+  margin: 0 auto;
+  position: relative;
+
+  .price {
+    color: #de8022;
+    font-size: 48rpx;
+    font-weight: bold;
+    margin-top: -10rpx;
+
+    .num {
+      font-size: 200rpx;
+      font-family: PingFang SC;
+
+    }
+  }
+
+  .newPeo {
+    position: absolute;
+    top: 90rpx;
+    left: 140rpx;
+    width: 180rpx;
+    height: 1rpx;
+  }
+
+  .desc {
+    color: rgba(255, 255, 255, 1);
+    font-size: 24rpx;
+    font-weight: 500;
+    margin: 20rpx 0;
+  }
+
+  .btn {
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    margin: -20rpx 0 30rpx;
+  }
+
+  .arrow {
+    display: block;
+    margin: 0 auto;
+    width: 23rpx;
+    height: 20rpx;
+  }
+
+  .tip {
+    position: relative;
+    width: 539rpx;
+    height: 74rpx;
+    line-height: 74rpx;
+    font-size: 36rpx;
+    margin: 0 auto;
+    color: #fff;
+
+    .txt {
+      position: relative;
+      z-index: 1;
+      font-size: 36rpx;
+    }
+
+    image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.notice {
+  padding: 42rpx 30rpx;
+  overflow-y: scroll;
+  // width: 688rpx;
+  // height: 279rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0px 20rpx 0px 20rpx;
+  margin: 40rpx 0 35rpx;
+
+  .item {
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(33, 33, 33, 1);
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dius {}
+
+.jg {
+  margin-right: 30rpx !important;
+}
+
+.relation {
+  padding: 0 60rpx 60rpx 60rpx;
+
+  .title {
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 38rpx;
+    text-align: center;
+  }
+
+  .phone,
+  .address {
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .phone {
+    margin-bottom: 30rpx;
+  }
+}
+
+.warning {
+  display: block;
+  margin: auto;
+  width: 628rpx;
+  background: rgba(222, 128, 34, 1);
+  border-radius: 20rpx;
+  color: #000;
+  margin-bottom: 50rpx;
+  padding: 20rpx;
+
+  image {
+    width: 40rpx;
+    height: 36rpx;
+  }
+}
+
+.fujiHang {
+  position: relative;
+  margin: 0 32rpx;
+  box-sizing: border-box;
+
+  image {
+    width: 100%;
+  }
+
+  .dingWei {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 30rpx;
+
+
+    .title {
+      font-size: 36rpx;
+      color: #212121;
+      margin-bottom: 30rpx;
+    }
+  }
+
+  .jindu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60rpx;
+    margin-top: 30rpx;
+
+    .flexs {
+      flex: 1;
+      margin-right: 20rpx;
+    }
+
+    .text {
+      font-size: 20rpx;
+
+      .c {
+        color: #DE8022;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .buyNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      margin: 18rpx 20rpx;
+      font-size: 24rpx;
+
+      .c {
+        color: #DE8022;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.van-progress {
+  height: 16rpx !important;
+}
+
+.fuLC {
+  box-sizing: border-box;
+  padding: 0 32rpx 190rpx;
+
+  image {
+    width: 100%;
+    height: 1rpx;
+  }
+}
+
+.activity {
+  display: block;
+  margin: auto;
+  background: #fff;
+  width: 628rpx;
+  padding: 40rpx 0;
+  // background: #e3e3e3;
+  // border: 30rpx solid #fff;
+  box-shadow: 0px 7rpx 6rpx 0px rgba(149, 136, 185, 0.19);
+
+  // background: url("https://bcdj.meiniwangluo.cn/images/huodonBg.png") 100% no-repeat;
+  .van-count-down {
+    width: 100%;
+    font-size: 48rpx !important;
+    margin-top: 20rpx;
+
+    font-weight: bold;
+    color: rgba(222, 128, 34, 1) !important;
+  }
+
+  .title {
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(33, 33, 33, 1);
+  }
+
+  .count-down {
+    margin-top: 30rpx;
+    background: linear-gradient(0deg,
+        rgba(249, 161, 73, 1),
+        rgba(223, 129, 36, 1));
+    border-radius: 5px;
+  }
+}
+
+.discounts {
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  width: 688rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .banner {
+    margin-top: 30rpx;
+    width: 100%;
+    height: 253rpx;
+  }
+
+  .vip {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 514rpx;
+    height: 192rpx;
+    padding: 20rpx 40rpx;
+    line-height: 1;
+    animation: sss .5s infinite;
+
+    .main {
+      position: relative;
+      margin-top: 30rpx;
+      z-index: 2;
+      align-items: flex-end;
+      justify-content: center;
+      display: flex;
+      color: #fff;
+      font-size: 49rpx;
+      font-weight: bold;
+
+      text {
+        line-height: 106rpx;
+        font-size: 141rpx;
+        font-family: PingFang SC;
+        margin-left: 23rpx;
+        font-weight: bold;
+        margin-right: 20rpx;
+      }
+
+      .impose {
+        font-size: 24rpx;
+        font-weight: bold;
+        padding: 6rpx 18rpx;
+        background: rgba(49, 49, 49, 1);
+        border-radius: 4rpx;
+        color: #fff;
+      }
+    }
+
+    image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tit {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+  }
+
+  .bottom {
+    // width: 100%;
+    color: #fff;
+    // height: 70rpx;
+    background: rgba(79, 86, 96, 1);
+    border-radius: 0 0 20rpx 20rpx;
+    padding: 22rpx 0 !important;
+  }
+}
+
+.avatar-list {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+  // justify-content: ;
+  padding: 0 30rpx;
+
+  .item {
+    width: 53rpx;
+    height: 53rpx;
+    border-radius: 50%;
+    margin-right: 5rpx;
+  }
+
+  .end {
+    color: #fff;
+    font-size: 36rpx;
+  }
+
+  .invite {
+    width: 100%;
+    vertical-align: bottom;
+    color: #fff;
+  }
+}
+
+.buy-wrap {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 90rpx;
+
+  .item {
+    flex: 1;
+    height: 100%;
+    line-height: 90rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .item:first-child {
+    background: rgba(79, 86, 96, 1);
+  }
+
+  .item:last-child {
+    background: rgba(222, 128, 34, 1);
+  }
+}
+
+.iosJJ {
+  margin: 0 10% 75%;
+  background: white;
+  border-radius: 15rpx;
+  overflow: hidden;
+
+  .child {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 20rpx 0;
+    box-sizing: border-box;
+    font-size: 30rpx;
+
+    input {
+      display: flex;
+      align-items: center;
+      border-radius: 30rpx;
+      font-size: 30rpx;
+      padding: 0 20rpx;
+      height: 60rpx;
+      box-sizing: border-box;
+      flex: 1;
+      margin-left: 10rpx;
+      border: 1px solid rgb(240, 240, 240);
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 20rpx;
+    box-sizing: border-box;
+
+    .flex {
+      flex: 1;
+
+      .van-button {
+        width: 100%;
+      }
+    }
+
+    .okFN {
+      .van-button {
+        background: #ff6262;
+        color: white;
+        border: none;
+      }
+    }
+  }
+
+
+}
+
+.new {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 0.26);
+
+  .van-notice-bar {
+    background: none !important;
+  }
+
+  image {
+    margin-left: 30rpx;
+    width: 30rpx;
+    height: 30rpx;
+  }
+
+  .flex {
+    flex: 1;
+  }
+}
+
+.van-popup {
+  background: none !important;
+}
+
+.imgCode {
+  width: 90%;
+  margin: 10% auto;
+}
+
+.shareBtn {
+  position: fixed;
+  height: 1rpx;
+  width: 90rpx;
+  bottom: 150rpx;
+  right: 30rpx;
+  z-index: 66;
+}
+
+
+
+#fuYaoQin {
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 73, 73, .3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  #myCanvasT {
+    background: #fff;
+    width: 550rpx;
+    height: 978.26rpx;
+  }
+
+  .btn {
+    padding: 10rpx 0 15rpx;
+
+    button {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28rpx;
+      color: #fff;
+      background: linear-gradient(90deg, rgba(255, 83, 83, 1) 0%, rgba(255, 43, 149, 1) 100%);
+      width: 320rpx;
+      height: 64rpx;
+      border-radius: 40rpx;
+      border: none;
+    }
+  }
+}
+
+@keyframes sss {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+
+  }
+
+  100% {
+    transform: scale(1);
+
+  }
+
+}

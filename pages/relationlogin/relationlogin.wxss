@@ -1,0 +1,37 @@
+.uselogos {
+    margin: 24rpx;
+    text-align: center;
+}
+
+.usetitle .uselogo {
+    border-radius: 50%;
+    text-align: center;
+    width: 120rpx;
+    height: 120rpx;
+    margin: 0 atuo!important;
+}
+
+.userinfo {
+    font-size: 32rpx;
+}
+
+.huoze {
+    height: 20rpx;
+    border-bottom: 1rpx solid #e0e0e0;
+    width: 400rpx;
+    margin: 48rpx auto;
+    text-align: center;
+}
+
+.huoze view {
+    width: 100rpx;
+    margin: 0 auto;
+    background: #f5f5f5;
+    color: #757575;
+}
+
+button[type="primary"] {
+    color: #fff;
+    background: linear-gradient(to right,#fe5722 0%,#ff191b 100%);
+    border: 1rpx #fe5722 solid;
+}

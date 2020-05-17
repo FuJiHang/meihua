@@ -1,0 +1,31 @@
+@import '../common/index.wxss';
+
+.van-count-down {
+    color: #323233;
+    color: var(--count-down-text-color, #323233);
+    font-size: 14px;
+    font-size: var(--count-down-font-size, 14px);
+    line-height: 20px;
+    line-height: var(--count-down-line-height, 20px)
+}
+
+.fuTime {
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    color: #212121;
+    font-weight: bold;
+    justify-content: center;
+
+}
+
+.fuTime .time {
+    background: linear-gradient(0deg, rgba(222, 128, 34, 1) 0%, rgba(250, 162, 74, 1) 100%);
+    border-radius: 6rpx;
+    padding: 10rpx 10rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 5rpx;
+  
+}

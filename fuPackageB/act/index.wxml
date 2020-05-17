@@ -1,0 +1,181 @@
+<!-- <van-notice-bar left-icon="/images/notice@x2.png" text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。" /> -->
+<view class="act-container" hover-class="none" hover-stop-propagation="false">
+  <view class="store-info" style="background: url(https://file.9oasd.com/bcdj/Storage/master/applet/202004101339008373100.png)center center / cover no-repeat">
+    <view class="detail">
+      <image class="icon" src="https://file.9oasd.com/bcdj/Storage/master/applet/202004101346579808180.png"></image>
+      <view class="name">{{actData.StoreName}}</view>
+      <view class="desc">眉、眼、唇专属私人定制</view>
+    </view>
+  </view>
+  <!-- <image src="https://file.9oasd.com/bcdj/Storage/master/applet/202004101339008373100.png" mode="aspectFill" /> -->
+  <block>
+    <view class="coupon text-center">
+      <image class="newPeo" src="{{imgUrl+'newPeo.png'}}" mode="widthFix"></image>
+      <view class="price">
+        抵用券￥
+        <span class="num">99</span>
+      </view>
+      <view class="btn">99元抵1000元 可抵扣任意3D定妆眉</view>
+      <view class="tip">
+        <view class="txt">抢购成功同时获赠以下项目</view>
+        <image src="{{imgUrl+'circle.png'}}"></image>
+      </view>
+      <view class="desc">（ 仅限活动期间，名额有限，售完为止 ）</view>
+      <image mode="widthFix" class="arrow" src="{{imgUrl+'arrow-b.png'}}"></image>
+    </view>
+  </block>
+  <view class="notice" wx:if="actData.Products && actData.Products.length > 01">
+    <view class="item" style=" white-space :  nowrap ;display: flex;align-items: center;" wx:for="{{actData.Products}}">
+      {{index + 1}}. {{item.Name}}{{item.UseTime}}{{item.Unit}}
+      <span style="font-size:28rpx;overflow: hidden;flex:1; white-space :  nowrap;margin:0 20rpx;display:flex;align-items: center;">
+        ---------------------------------------------------------------
+      </span>
+      价值{{item.Price}}元
+    </view>
+  </view>
+</view>
+<view class="relation">
+  <view class="title">
+    ——
+    <span style="margin:0 20rpx">联系方式</span>
+    ——
+  </view>
+  <view class="phone">美婲相约：{{actData.Tel}}</view>
+  <view class="address">活动地址：{{actData.Address}}</view>
+</view>
+<view class="warning text-center padding-t-30 padding-b-30">
+  <view class="title margin-b-25 font-28 flex-content-center" style="font-weight: bold;">
+    <image style="margin-right:10rpx; " class="jg" src="https://file.9oasd.com/bcdj/Storage/master/applet/202004101359383685840.jpg" class="margin-r-20"></image>
+    郑重声明
+  </view>
+  <view style="margin-top:10rpx" class="content font-24">全程不设置任何隐形消费，全程服务与正价完全一致</view>
+</view>
+<view class="fujiHang">
+  <image src="{{imgUrl+'huodonBg.png'}}" mode="widthFix" />
+  <view class="dingWei">
+    <view class="title ">活动倒计时</view>
+    <van-count-down class="count-down " time="{{ actData.overDate }}" format="DD 天 HH : mm : ss " />
+    <view class="jindu " wx:if="{{actData.UserLimitCount}}">
+      <span class="flexs">
+        <van-progress percentage="{{actData.JoinCount/actData.UserLimitCount}}" color="{{'#DE8022'}}" show-pivot='{{false}}' />
+      </span>
+      <span class="text">
+        <span class="c">{{actData.JoinCount/actData.UserLimitCount*100}}%</span>
+      </span>
+    </view>
+    <view class="buyNum ">
+      <span class="text">
+        活动限额
+        <span class="c">{{actData.UserLimitCount?actData.UserLimitCount:'不限购'}}</span>
+        人
+      </span>
+      <span class="text">
+        已购
+        <span class="c">{{actData.JoinCount}}</span>
+        人
+      </span>
+    </view>
+  </view>
+</view>
+<view class="big-title text-center flex-content-center" wx:if="{{actData.GiftList.length}}">
+  <view class="font-24 margin-r-30" style="margin-right:30rpx;">////////</view>
+  参加活动 现场领礼品
+  <view class="font-24 margin-l-30">////////</view>
+</view>
+<view class="slide-container" wx:if="{{actData.GiftList.length}}">
+  <swiper class="scroll" next-margin="20rpx" autoplay="{{false}}" interval="{{interval}}" display-multiple-items="{{1}}" style="overflow:visible;height: 462rpx;">
+    <block wx:for="{{actData.GiftList}}" wx:key="{{index}}">
+      <swiper-item style="height: 100%;" class="scroll-item" bindtap="jumpTo" data-type="video" data-url="/pages/common/seeVideo?path={{item.videoLink}}">
+        <!-- style="width: {{actData.GiftList.length == 1 ? '100%' : '462rpx'}}" -->
+        <image class="img" src="{{item.ImageUrl}}" mode="aspectFill"></image>
+        <view class="clock flex-content-center">
+          <image src="{{imgUrl+'clock.png'}}"></image>
+        </view>
+        <view class="content flex-center text-center">
+          <view class="item-left text-overflow flex-col-1">{{item.Name}}</view>
+          <view class="item-right text-overflow flex-col-1">
+            零售价￥
+            <text class="price font-36">{{item.CostPrice}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <view class="scroll flex-center" style="width: {{375 * videoList.length }}rpx" hidden></view> -->
+</view>
+<view class="avatar-list">
+  <view class="item" wx:for="{{actData.UserList}}" style="background: url({{item.Picture}})center center / cover no-repeat"></view>
+  <view class="end">...</view>
+  <view class="invite font-24 text-right">
+    共
+    <text class="font-30">{{actData.UserList.length}}</text>
+    人已参加
+  </view>
+</view>
+<view class="discounts padding-t-50  margin-t-40 text-center margin-b-100">
+  <view class="title font-36">{{actData.StoreName || '-'}}</view>
+  <view class="title font-36 margin-t-15 margin-b-30" style="color: #DE8022;margin-bottom:28rpx">
+    钜惠来袭
+  </view>
+  <view class="vip">
+    <view class="tit font-24">在线支付 尊享超级特权</view>
+    <image class="bg" src="{{imgUrl+'vipBg417.png'}}"></image>
+    <view class="main flex">
+      ￥
+      <text>99</text>
+      <view class="impose">每人限购1次</view>
+    </view>
+  </view>
+  <view class="font-26 margin-t-30 margin-b-40 font-bold" style="color:#333;">
+    购买后，除赠送项目外，还可现场领取礼品
+  </view>
+  <view class="banner" style="background:url(https://file.9oasd.com/bcdj/Storage/master/applet/202004101201043685940.jpg)center center / cover no-repeat"></view>
+  <view class="bottom padding-30 text-center">美婲平台明星技术导师团队亲临现场</view>
+</view>
+<view class="fuLC">
+  <image src="{{imgUrl+'indexS100.png'}}" mode="widthFix" />
+</view>
+<view class="new" wx:if="{{actData.TopMsg}}">
+  <image src="{{imgUrl+'newsB.png'}}" mode="widthFix" />
+  <span class="flex">
+    <van-notice-bar text="{{actData.TopMsg}}" />
+  </span>
+</view>
+<!-- <template is="wxParse" data="{{wxParseData:metaDescription.nodes}}"></template> -->
+<view class="buy-wrap">
+  <navigator class="item" bindtap="openFN">联系客服</navigator>
+  <view class="item" bindtap="goBuy" hover-class="navigator-hover" open-type="navigate">去购买</view>
+</view>
+<!--  -->
+<image class="shareBtn" bindtap="myQCode" mode="widthFix" src="{{imgUrl+'actionBtn001.png'}}" />
+<!-- 弹窗 -->
+<van-popup show="{{show}}" bindtap="onCloseP" position="bottom" bind:close="onCloseP">
+  <!-- sdsadsad -->
+  <view class="iosJJ">
+    <view class="child" wx:for="{{personData}}" wx:key="{{index}}">
+      {{item.name}}
+      <input value="{{item.val}}" catchtap placeholder="{{item.plr}}" bindinput="changeInput" data-name="{{'personData['+index+'].val'}}" />
+    </view>
+    <view class="btn">
+      <span class="flex">
+        <van-button size="small" bindtap="onCloseP">取消</van-button>
+      </span>
+      <span class="okFN flex">
+        <van-button size="small" catchtap="payOrder">确定</van-button>
+      </span>
+    </view>
+  </view>
+</van-popup>
+<van-popup show="{{showT}}" bindtap="onCloseP" position="bottom" bind:close="onCloseP">
+  <!-- sdsadsad -->
+  <image class="imgCode" src="{{actData.CodeUrl}}" mode="widthFix" />
+</van-popup>
+<!-- showTH -->
+<van-popup show="{{showTH}}" custom-style='height:100%;' bindtap="onCloseP" position="bottom" bind:close="onCloseP">
+  <view id="fuYaoQin" catchtouchmove="true" bindtap="onCloseP">
+    <canvas catchtap data-mode="content" canvas-id="myCanvasT" id="myCanvasT" />
+    <view class="btn" >
+      <button catchtap="saveImg">保存到相册</button>
+    </view>
+  </view>
+</van-popup>

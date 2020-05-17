@@ -1,0 +1,94 @@
+<view class="invoiceBox">
+    <view class="invoice_div">
+        <label>发票类型</label>
+        <view class="invoice_tab">
+            <text bindtap="sel_ordinary" class="mui-control-item {{sel_ordinary?'':'active'}}" id="tab1">普通发票</text>
+            <text bindtap="sel_electron" class="mui-control-item {{sel_electron?'':'active'}}" id="tab2">电子发票</text>
+            <text bindtap="sel_tax" class="mui-control-item {{sel_tax?'':'active'}}" id="tab3">增值税发票</text>
+        </view>
+        <view class="invoice_tab tax-des" hidden="{{sel_tax}}" style="background:url({{taxBg}}) no-reapter">发票将在订单完成之后7-30个工作日后寄出。</view>
+    </view>
+    <view class="mui-slider-item mui-control-content mui-active" id="item1mobile">
+        <view class="invoice_div" hidden="{{!sel_tax}}">
+            <label>发票抬头</label>
+            <view class="invoice_style">
+                <label class="checked"></label>个人
+      </view>
+            <view class="invoice_style" hidden="{{!sel_tax}}">
+                <label class="check"></label>单位
+      </view>
+        </view>
+        <view class="invoice_div" hidden="{{!sel_tax}}">
+            <label>单位名称</label>
+            <input class="input-name" placeholder="必填，请填写单位名称" type="text"></input>
+        </view>
+        <view class="invoice_div" hidden="{{!sel_tax}}">
+            <label>添加税号</label>
+            <input class="input-name" placeholder="必填，请填写纳税人识别号" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>发票内容</label>
+            <view class="invoice_style">
+                <text>明细</text>
+            </view>
+        </view>
+    </view>
+    <view class="mui-slider-item mui-control-content electron" hidden="{{sel_electron}}" id="item2mobile">
+        <text class="message">收票人信息</text>
+        <view class="invoice_div">
+            <label>收票人手机</label>
+            <input class="input-name" placeholder="必填，通过手机号接收开票提醒" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>收票人邮箱</label>
+            <input class="input-name" placeholder="必填，用来接收电子发票" type="text"></input>
+        </view>
+    </view>
+    <view class="mui-slider-item mui-control-content electron" hidden="{{sel_tax}}" id="item3mobile">
+        <view class="message fontweight">增票资质<text class="small-name">(以下各项均为必填项)</text>
+        </view>
+        <view class="invoice_div">
+            <label>单位名称</label>
+            <input class="input-name" placeholder="必填，请填写单位名称" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>添加税号</label>
+            <input class="input-name" placeholder="必填，请填写纳税人识别号" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>注册地址</label>
+            <input class="input-name" placeholder="请填写单位注册地址" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>注册电话</label>
+            <input class="input-name" placeholder="请填写单位注册电话" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>开户银行</label>
+            <input class="input-name" placeholder="请填写单位开户银行" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>银行账户</label>
+            <input class="input-name" placeholder="请填写单位银行账户" type="text"></input>
+        </view>
+        <view class="message fontweight">收票人信息<text class="small-name">(以下各项均为必填项)</text>
+        </view>
+        <view class="invoice_div">
+            <label>收票人姓名</label>
+            <input class="input-name" placeholder="请填写收票人姓名" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>收票人手机</label>
+            <input class="input-name" placeholder="请填写收票人手机号码 " type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>收票人地区</label>
+            <input class="input-name" placeholder="请选择省 / 市 / 区" type="text"></input>
+        </view>
+        <view class="invoice_div">
+            <label>详细地址</label>
+            <input class="input-name" placeholder="请填写详细地址" type="text"></input>
+        </view>
+    </view>
+</view>
+<view class="sure-btn">确认</view>

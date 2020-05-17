@@ -1,0 +1,16 @@
+<!-- 店家二维码 -->
+<view id="fuStroreCode">
+    <view class="bg">
+        <image src="{{imgUrl+'bgErweima.png'}}" mode="widthFix" />
+        <view class="contant">
+            <view class="tip">识别图中二维码</view>
+            <view class="name">有任何问题  都可以找我哦~</view>
+            <view class="img">
+                <image src="{{url}}" mode="widthFix" />
+            </view>
+            <van-button bindtap="saveImgFN">点击保存至相册</van-button>
+        </view>
+    </view>
+
+      <image class="close" src="{{imgUrl+'guanbi.png'}}" mode="widthFix" />
+</view> 

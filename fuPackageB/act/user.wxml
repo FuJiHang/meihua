@@ -1,0 +1,50 @@
+<view class="cu-bar search bg-white flex" style="padding: 30rpx 0">
+  <view class="search-form round ">
+    <!-- <text class="cuIcon-search"></text> -->
+    <input type="text" style="padding-left: 60rpx" class="font-24" value="{{content}}" placeholder="请输入名字和手机号" confirm-type="search" bindinput="inputText"></input>
+  </view>
+  <view class="action" style="margin-left: 10rpx">
+    <button class="cu-btn  shadow-blur round my-search" bindtap="submit">搜索</button>
+  </view>
+</view>
+<view class="VerticalBox margin-t-20">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.StoreName}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    
+    <block wx:if="{{list.length > 0}}">
+      <view class=" padding-l-10 padding-r-10" wx:for="{{list}}" wx:key id="main-{{index}}">
+        <view class='cu-bar solid-bottom bg-white text-center'>{{item.item[0].StoreName}}</view>
+        <view class="cu-list" >
+          <navigator class="cu-item flex-center" wx:for="{{item.item}}" wx:for-item="cItem" url="/fuPackageB/act/apply?id={{cItem.Id}}">
+            <view class="cover" style="background:url({{cItem.Picture}})center center / cover no-repeat;"></view>
+            <view class="my-content">
+              <view class="flex-center">
+                <text class="name fl-left">{{cItem.RealName}}</text>
+                <view class="">{{cItem.CellPhone}}</view>
+              </view>
+              <view class="detail">
+                <view class="ite flex-center">
+                  <text class="fl-left">赠送项目：</text>
+                  <view class="product">{{cItem.ProductName}}</view>
+                  <!-- <view class="use used flex-content-center"></view> -->
+                </view>
+                <view class="ite flex-center">
+                  <text class="fl-left">赠送礼品：</text>
+                  <view class="product">{{cItem.GiftName}}</view>
+                  <view class="use flex-content-center {{cItem.IsGetGift ? 'used' : ''}}">
+                    {{cItem.IsGetGift ? '已使用' : '未使用'}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+    <!-- <view class="text" style="padding-top: 50rpx;text-align: center">暂无数据</view> -->
+  </scroll-view>
+</view>

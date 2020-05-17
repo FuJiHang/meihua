@@ -1,0 +1,278 @@
+/* pages/PersonalInformationMember/PersonalInformationMember.wxss */
+page{
+  position: relative;
+  padding-bottom: 44px;
+  box-sizing: border-box;
+}
+
+#PersonalInformationMember {
+  width: 100%;
+
+}
+.bw{
+  background: white;
+}
+
+.PLM-top-box {
+  width: 100%;
+  height: 240rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.PLM-top-img-box {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.PLM-top-img-box view {
+  color: #666;
+  font-size: 26rpx;
+  width: 120rpx;
+  text-align: center;
+}
+
+.PLM-top-img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.PLM-center-box {
+  width: 100%;
+  display: flex;
+  background: #fff;
+  margin-left: 20rpx;
+}
+
+.PLM-center-list-box {
+  width: 95%;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  height: 88rpx;
+}
+
+.PLM-center-list-title {
+  width: 160rpx;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  color: #666;
+  height: 100%;
+}
+
+.PLM-center-list-val {
+  flex: 1;
+  height: 100%;
+}
+
+.PLM-center-list-ipt {
+  width: 80%;
+  height: 100%;
+  font-size: 26rpx;
+  color: #CCCCCC;
+}
+
+.PLM-center-list-right {
+  width: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PLM-center-list-right-img {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.PLM-geren-box {
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+}
+
+.PLM-geren-title {
+  height: 88rpx;
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 88rpx;
+  text-align: center;
+}
+
+.PLM-geren-put {
+  height: 88rpx;
+  width: 150rpx;
+  font-size: 28rpx;
+  line-height: 88rpx;
+}
+
+.PLM-geren-put-box {
+  height: 88rpx;
+  flex: 1;
+}
+
+.PLM-geren-put {
+  width: 100%;
+  height: 100%;
+}
+
+.PLM-address-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.PLM-address-box-diqu {
+  width: 95%;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  font-size: 28rpx;
+  color: #666;
+  align-items: center;
+}
+
+.PLM-address-box-diqu-title {
+  width: 160rpx;
+  height: 88rpx;
+  display: flex;
+  line-height: 88rpx;
+}
+
+.PLM-address-box-diqu-inp-box {
+  flex: 1;
+}
+
+.PLM-address-box-diqu-inp-box .picker {
+  flex: 1;
+  height: 100%;
+}
+
+.PLM-address-box-diqu-inp {
+  height: 100%;
+  margin-left: 100rpx;
+  font-size: 26rpx;
+}
+
+.PLM-address-box-diqu-inp-right-box {
+  width: 100rpx;
+  height: 88rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PLM-address-box-diqu-inp-right {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.PLM-address-box-xiangxi {
+  width: 100%;
+  height: 260rpx;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10rpx;
+}
+
+.PLM-address-box-xiangxi-box {
+  width: 95%;
+  display: flex;
+  padding-top: 20rpx;
+  align-items: flex-start;
+}
+
+.PLM-address-box-xiangxi-title {
+  
+  width: 160rpx;
+  font-size: 28rpx;
+  
+  color: #666;
+ 
+}
+
+.PLM-address-box-xiangxi-inp-box {
+ 
+  flex: 1;
+  overflow: hidden;
+  
+}
+
+.PLM-address-box-xiangxi-inp-box >textarea {
+  font-size: 26rpx;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  color: #333;
+  width:100%; 
+  max-height:100%;
+  box-sizing: border-box;
+  z-index: 0;
+  position: relative;
+  
+  /* 135799 */
+}
+
+.PLM-bottom-submit {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 98rpx;
+  background: #f56f68;
+  line-height: 98rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 0;
+}
+.genderBox,.birthdayBox,.userQQbox{
+  background: #FFFFFF;
+  padding: 20rpx 20rpx 20rpx 0;
+  margin-left: 20rpx;
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  box-sizing: border-box;
+}
+.userQQbox .inputBF{
+  flex: 1;
+}
+span{
+  min-width: 150rpx;
+  margin-right: 10rpx;
+}
+.userQQbox .inputBF input{
+  width: 100%;
+}
+.genderBox span ,.birthdayBox span,.userQQboxTitle{
+ color: #666666;
+ font-size: 28rpx;
+ 
+}
+.genderValueBox ,.birthdayValueBox,.qqinput{
+  color: #CCCCCC;
+ font-size: 26rpx;
+ /* margin-left: 106rpx; */
+}
+.genderValueBox,.birthdayValueBox{
+  flex: 1;
+}
+::-webkit-input-placeholder{
+  color:#CCCCCC;
+
+} 
+
+/* .van-picker{
+  width: 300px;
+} */
+.GendercheckBox {
+  /* position: absolute; */
+  width: 300px;
+  height: 200rpx;
+  
+}

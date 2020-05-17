@@ -1,0 +1,80 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2019-04-17 17:56:48 
+ * @Last Modified by:   fujihang 
+ * @Last Modified time: 2019-04-17 17:56:48 
+    我的页面（身份切换）
+*/ -->
+<view id="fuMy">
+    <view class="MyCont">
+        <!-- 头像 -->
+        <view class="headTop">
+            <image mode="aspectFill" src="{{GetMembersInfo.Picture}}" />
+            <span class="contant">
+                <span class="name">{{GetMembersInfo.NickName}}</span>
+                <span class="join">{{GetMembersInfo.gradeName}}</span>
+                <span class="baozhenjin" wx:if="{{GetMembersInfo.gradeName=='店家'&&GetMembersInfo.Remark}}">
+                    诚意金：500元
+                </span>
+            </span>
+            <!-- <image bindtap="toMH" class="img" mode="widthFix" src="{{imgUrl+'meihuaLogo.png'}}" /> -->
+            <!-- <van-icon name="arrow" /> -->
+        </view>
+        <!-- 功能 -->
+        <view class="function" wx:for="{{functionJosn}}" wx:key="{{indexf}}" wx:for-index="indexf">
+            <view class="navtTop">
+                <image src="{{imgUrl+'spot_4.png'}}" mode="aspectFill" />
+                <text class="nameTop">{{item.name}}</text>
+                <!-- <view class="righte" wx:if="{{!item.fun}}">更多</view>
+                <van-icon name="arrow" /> -->
+            </view>
+            <view class="idCardCont {{item.fun?'':'funM'}}">
+                <view class="cardChild" wx:for="{{item.child}}" wx:key="{{index}}" wx:for-item="child" data-index="{{index}}" data-id="{{indexf}}" bindtap="toFN">
+                    <form bindsubmit='registerFormSubmit' report-submit='true' data-index="{{index}}" data-id="{{indexf}}">
+                        <button form-type='submit' class="btnMrFu" data-index="{{index}}">
+                            <view class="bg">
+                                <image mode="aspectFill" src="{{child.img}}" data-index="{{index}}" data-id="{{indexf}}" />
+                            </view>
+                            <view class="name" data-index="{{index}}" data-id="{{indexf}}">
+                                {{child.name}}
+                            </view>
+                        </button>
+                    </form>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部导航条 -->
+    <!-- <view class="navBar">
+        <view class="child" wx:for="{{navBar}}" wx:key="index" data-index="{{index}}" bindtap="toNavFN">
+            <image mode="aspectFill" src="{{item.img}}" data-index="{{index}}"/>
+                <text class="name" data-index="{{index}}">{{item.name}}</text>
+        </view>
+    </view> -->
+</view>
+<van-popup class="fwb" show="{{ showXY }}" position="bottom">
+    <rich-text class="richtext" nodes="{{richtext}}"></rich-text>
+    <view class="btn">
+        <span class="bty">
+            <van-button bindtap="closeXY">不同意</van-button>
+        </span>
+        <span class="{{totalTime>0?'disable':''}}">
+            <van-button bindtap="wtyFN">{{SMS}}</van-button>
+        </span>
+    </view>
+</van-popup>
+<view class="showAlert" bindtap="closeFN">
+    <van-popup show="{{ showAlert }}" position="bottom">
+        <view class="btnTwo" catchtap>
+            <view class="input" >
+                邀请码：
+                <span class="flex">
+                    <input value="{{yqm}}" bindinput="inputFN" data-name="yqm" placeholder="请输入邀请码" />
+                </span>
+            </view>
+            <view class="bty">
+                <van-button catchtap="okFN">确定</van-button>
+            </view>
+        </view>
+    </van-popup>
+</view>

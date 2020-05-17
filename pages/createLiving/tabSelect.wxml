@@ -1,0 +1,15 @@
+<!--pages/createLiving/tabSelect.wxml-->
+<view class='TabList'>
+  <view class='tabs' wx:if="{{selectSortItem.TypeName}}" bindtap='cleanItem'>
+    <view class='close'></view>不选择任何分类
+  </view>
+  <view wx:if="{{sortList.length > 0}}">
+    <view class='tabs' wx:for="{{sortList}}" wx:key="{{item.TypeId}}" bindtap='toSelectSort' data-index='{{index}}' data-id='{{item.TypeId}}'>
+      # {{item.TypeName}}
+      <view class='iconNum'>
+        <text>{{item.RoomCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='tabs' wx:else>暂无可选分类</view>
+</view>

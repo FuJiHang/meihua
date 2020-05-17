@@ -1,0 +1,72 @@
+<!--pages/informationToApplyForShop/informationToApplyForShop.wxml-->
+<!-- <text>pages/informationToApplyForShop/informationToApplyForShop.wxml</text> -->
+<view id='informationToApplyForShop'>
+  <view class='ITFAS-top-box'>
+  
+    <view class='ITAFT-top-center-box'>
+      <view class='ITAFT-top-left'>
+        <image src='/images/role_icon_01.png'></image>
+      </view>
+      <view class='ITAFT-top-center'>
+        <view class='ITAFT-top-title'>店家</view>
+        <view class='ITAFT-top-describe'>描述的文字大小</view>
+      </view>
+      <view class='ITAFT-top-right'>已选择</view>
+    </view>
+    <!-- ITFAS-top-box #FFB462-->
+  </view>
+  <view class='ITFAS-center-box'>
+    <view class='ITFAS-center-heand-box'>
+      <view class='ITFAS-center-heand-title'> 门店头像</view>
+      <view class='ITFAS-center-heand-image'>
+        <image src='/images/pic_head.png'></image>
+      </view>
+      <view class='ITFAS-center-heand-right'>}</view>
+    </view>
+
+    <view class='ITFAS-center-shopName-box'>
+      <view class='ITFAS-center-shopName-title'>门店名称</view>
+      <view class='ITFAS-center-shopName-inp-box'>
+        <input class='ITFAS-center-shopName-inp' type='text' placeholder='请输入门店名称'></input>
+      </view>
+    </view>
+
+    <view class='ITFAS-center-nowAddress-box'>
+      <view class='ITFAS-center-nowAddress-title'>所在区域</view>
+      <view class='ITFAS-center-nowAddress-inp-box'>
+        <input class='ITFAS-center-nowAddress-inp' type='text' placeholder='请选择所在区域'></input>
+      </view>
+      <view class='ITFAS-center-nowAddress-right'>
+        }
+      </view>
+    </view>
+
+    <view class='ITFAS-center-businessHours-box'>
+
+      <view class='ITFAS-center-businessHours-title'>营业时间</view>
+      <view class='ITFAS-center-businessHours-inp-box'>
+        <input class='ITFAS-center-businessHours-inp' type='text' placeholder='请选择营业时间'></input>
+      </view>
+      <view class='ITFAS-center-businessHours-right'>
+        }
+      </view>
+    </view>
+    <view class='ITFAS-center-postShopimg-box'>
+      <view class='ITAFT-bottom-box'>
+        <view class='ITFAT-bottom-title'>上传门店
+          <span>(最多可上传5张图片)</span>
+        </view>
+        <view class='ITFAT-bottom-img-box'>
+          <view class='ITFAT-bottom-img-box2' wx:for="{{imgUrl}}" wx:key="{{index}}" wx:if="{{item.url}}">
+            <image src='{{item.url ? item.url : ""}}' class='ITFAT-bottom-img'></image>
+          </view>
+          <view class='ITFAT-bottom-img-add-btn'>
+            <image src='/images/add_2.png' bindtap='postimg'></image>
+          </view>
+        </view>
+        <view class='ITFAT-bottom-bottom'></view>
+      </view>
+    </view>
+  </view>
+  <view class='ITFAT-bottom-submit'>提交</view>
+</view>

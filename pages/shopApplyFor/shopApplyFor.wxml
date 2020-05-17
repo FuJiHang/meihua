@@ -1,0 +1,37 @@
+<!--pages/shopApplyFor/shopApplyFor.wxml-->
+<!-- <text>上传文件本地获取资源没做</text> -->
+<view id='shopApplyFor'>
+  <view class='SAP-top-box'>
+    <view class='SAP-top-img-box'>
+      <image src='/images/hm.png' class='SAP-top-img'></image>
+      <view class='SAP-top-img-title'>
+        更改门店logo
+      </view>
+    </view>
+  </view>
+  <!-- 门店详情盒子 -->
+  <view class='SAP-center-from'>
+      <view class='SAP-center-from-list-box' wx:for="{{sFromData}}" wx:key="{{index}}">
+        <view class='SAP-center-from-lis-title'>{{item.title}}</view>
+        <view class='SAP-center-from-lis-inp-box'>
+          <input class='SAP-center-from-lis-inp' type='text' placeholder='{{item.placeholder}}'></input>
+        </view>
+        <view class='SAP-center-from-right' wx:if="{{index == 1 || index == 2}}">
+          <image src='/images/arrow_right.png'></image>
+        </view>
+      </view>
+      <!-- 上传的控件 -->
+      <view class='SAP-center-from-post-box'>
+        <view class='SAP-center-from-post-title'>
+          <span>上传门店</span> <span class="SAP-max-img">(最多可上传5张图片)</span>
+        </view>
+        <view class='SAP-center-from-post-btn' bindtap='getimg'> 
+          <!-- <input type='file' class='SAP-center-from-file'></input> -->
+        </view>
+      </view>
+    </view>
+    <view class='SAP-submitBtn'>
+      保存
+    </view>
+
+</view>

@@ -1,0 +1,30 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2019-09-16 21:08:30 
+ * @Last Modified by:   fujihang 
+ * @Last Modified time: 2019-09-16 21:08:30 
+    四个身份切换
+*/ -->
+
+<view id="fuMyTowQH">
+
+
+    <view class="idCardCont">
+      <view class="cardChild" wx:for="{{idCard}}" wx:key="index" bindtap="toFNF" data-index="{{index}}">
+        <form bindsubmit='registerFormSubmit' report-submit='true' data-index="{{index}}">
+          <button form-type='submit' class="btnMrFu" data-index="{{index}}">
+            <image mode="aspectFill" src="{{item.img}}" data-index="{{index}}" />
+            <view class="name" data-index="{{index}}">{{item.name}}</view>
+          </button>
+        </form>
+      </view>
+    </view>
+
+</view>
+
+<!-- zxtdzShow -->
+<van-popup show="{{zxtdzShow}}" position="bottom" bind:close="onCloseP">
+  <view class="chooseZX" data-index="{{index}}" wx:for="{{zxtdzList}}" wx:key="{{index}}" bindtap="zxtdzFN">
+    {{item}}
+  </view>
+</van-popup>

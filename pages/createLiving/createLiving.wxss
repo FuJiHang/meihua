@@ -1,0 +1,267 @@
+/* pages/createLiving/createLiving.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.disflex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 上传图片 */
+
+.uploadPic {
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.uploadPic .images {
+  width: 100%;
+}
+
+.uploadPic .uploadBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 80rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 20rpx;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+/* 表单 */
+
+.add-addr-wrap {
+  border-top: 2rpx solid #e5e5e5;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.input-wrap {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border-bottom: 2rpx solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.input-wrap:last-child {
+  border-bottom: none;
+}
+
+label {
+  flex-shrink: 0;
+  margin-right: 70rpx;
+  display: inline-block;
+  font-size: 14px;
+}
+
+label>span {
+  margin-left: 10rpx;
+  color: red;
+}
+
+.input-wrap>input, .input-wrap text {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.textarea {
+  width: 100%;
+  height: 200rpx;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.input-wrap>textarea {
+  resize: none;
+  border: none;
+  height: 200rpx;
+  flex: 1;
+  font-size: 14px;
+  margin-left: 33rpx;
+}
+
+.input-wrap picker {
+  flex: 1;
+}
+
+.input-wrap text {
+  width: 100%;
+  text-align: top;
+  height: 44px;
+  line-height: 44px;
+}
+
+.placeHolder {
+  color: #808080;
+}
+
+.sort{
+  color:#808080;
+  font-size: 31rpx;
+  margin-left: 33rpx;
+}
+
+.right-arrow {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-top: 4rpx solid #999;
+  border-right: 4rpx solid #999;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 30rpx;
+  top: 17px;
+}
+
+/* 条件 */
+
+.condition {
+  width: 100%;
+  margin-top: 40rpx;
+  border-top: 2rpx solid #e5e5e5;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.condition-wrap {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px 15px 15px 0;
+}
+.condition-wrap .arrowRight{
+    width: 15rpx;
+    height: 15rpx;
+    margin-left: 10rpx;
+    border-top: 2rpx solid black;
+    border-right: 2rpx solid black;
+    transform: rotate(45deg);
+}
+
+.useCondition {
+  font-size: 33rpx;
+}
+
+.payChannel {
+  display: flex;
+  margin: 20rpx 0 0 80rpx;
+  color: #919191;
+}
+
+.payChannel>input {
+  border: 2rpx solid #ccc;
+  width: 40%;
+  margin: 0 10rpx;
+  text-align: right;
+  color: black;
+}
+
+.radio:first-child {
+  margin-bottom: 15px;
+}
+
+.checkbox {
+  margin-bottom: 15px;
+}
+
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+
+/* 商品 */
+
+.goodsContent {
+  width: 100%;
+  margin-top: 40rpx;
+  border-top: 2rpx solid #e5e5e5;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.goodsList {
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.goodsItem {
+  width: 33vw;
+  height: 33vw;
+  margin: 10rpx;
+  background-color: cornflowerblue;
+  box-sizing: border-box;
+  display: inline-block;
+  border:2rpx solid #CCCCCC;
+  position: relative
+}
+.goodsItem .images{
+  width: 100%;
+  height: 100%;
+}
+.goodsItem .goodsPrice{
+  width: 100%;
+  height: 8vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  line-height: 8vw;
+}
+
+.goodsSelect{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+
+.selectNum{
+  background: #E95278;
+  padding: 10rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: -50rpx;
+  top: -25rpx;
+  width:25rpx;
+  height:25rpx;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 25rpx;
+  color: white
+}
+
+/*保存按钮*/
+
+.btn-wrap {
+  margin: 60rpx 0;
+  padding: 0 30rpx;
+  width: 100%;
+  height: 88rpx;
+  box-sizing: border-box;
+}
+
+.btn-wrap>button {
+  width: 100%;
+  height: 100%;
+  line-height: 88rpx;
+  background: #e0001b;
+  color: #fff;
+  font-size: 15px;
+}

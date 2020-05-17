@@ -1,0 +1,65 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2019-04-24 13:36:53 
+ * @Last Modified by:   fujihang 
+ * @Last Modified time: 2019-04-24 13:36:53 
+    商城查询
+    */ -->
+<view id="fuCollect">
+
+
+    <view class="contBL">
+        <scroll-view scrolltolower="150" scroll-y="true" bindscrolltolower="getData">
+            <view class="productCont">
+                <view class="product" wx:for="{{dataList}}" wx:key="{{index}}">
+                    <view class="img">
+                        <image src="{{item.ImageUrl}}" mode="aspectFill"/>
+                    </view>
+                    <view class="name">{{item.Name}}</view>
+                    <view class="det">{{item.ShortDescription}}</view>
+                    <view class="val">
+                        <image src="{{imgUrl+'fujinQian.png'}}" />
+                        <view class="ovFU">
+                            <span class="bea">
+                                <span class="num">{{item.NeedPoint}}</span>
+                                美丽金
+                            </span>
+                            <span class="xjin">
+                                +
+                                <span class="num">{{item.CostPrice}}</span>
+                                现金
+                            </span>
+                        </view>
+                        
+                    </view>
+                    <view class="btnFU">
+                        <view class="chaozuo">
+                            <view class="collect {{item.IsCollected=='True'?'coll':''}}" data-index="{{index}}"data-GiftId="{{item.GiftId}}" bindtap="collFN">
+                                <van-icon name="like" />
+                                加入收藏
+                            </view>
+                        
+                            <view class="btn">
+                                <van-button size="small" data-CostPrice="{{item.CostPrice}}" data-GiftId="{{item.GiftId}}" bindtap="buyFN">
+                                    <!-- 立即兑换. -->
+                                    <image src="{{imgUrl+'fujinQianB.png'}}"  class="bImg"/>立即兑换
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="noMore" wx:if="{{finsh}}">
+                没有更多的啦~~~
+            </view>
+        </scroll-view>
+    </view>
+   
+    
+    <!-- <view class="noMore" >
+        没有数据哦~~~
+    </view> -->
+    
+    
+
+</view>

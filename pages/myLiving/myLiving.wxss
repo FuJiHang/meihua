@@ -1,0 +1,276 @@
+/* pages/myLiving/myLiving.wxss */
+
+page {
+  background-color: white;
+}
+
+.disflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 顶部 */
+
+.topContent {
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 20rpx;
+}
+
+.topContent .broadcasrNum {
+  text-align: center;
+  width: 30%;
+}
+
+.topContent image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.topContent text {
+  font-weight: bold;
+  font-size: 46rpx;
+}
+
+.topContent .span {
+  font-size: 26rpx;
+  color: #9c9c9c;
+}
+
+/* tab切换 */
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+  left: 0;
+  z-index: 2;
+}
+
+.nav .default {
+  flex: 1;
+  text-align: center;
+  color: #989898;
+}
+
+.nav .red {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  color: #fd2469;
+  border-bottom: 6rpx solid #fd2469;
+}
+
+/* 直播列表 */
+
+.livingList {
+  width: 100%;
+  padding-top: 20rpx;
+}
+
+.livingList .startLiving {
+  width: 95%;
+  height: 100rpx;
+  margin: 0 auto 20rpx;
+  border-radius: 15rpx;
+  box-shadow: 1px 5px 20px -2px #989898;
+  color: white;
+  background-color: #ff5678;
+  font-size: 45rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.livingList .listContent {
+  width: 92%;
+  margin: 40rpx 2%;
+}
+
+.livingList .listContent .listItem {
+  width: 100%;
+  padding: 2%;
+  box-shadow: 0px 0px 10px #ccc;
+  margin-bottom: 20rpx;
+}
+
+.livingList .listContent .listItem .livingLeft {
+  width: 32.5vw;
+  position: relative;
+}
+
+.livingList .listContent .listItem .livingLeft .livingStatus {
+  width: 20vw;
+  height: 50rpx;
+  position: absolute;
+  top: 25rpx;
+  left: 0;
+  border-top-right-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.livingStatusText {
+  color: white;
+  font-size: 32rpx;
+  padding: 6rpx 0 0 45rpx;
+}
+
+.livingList .listContent .listItem .livingLeft .redDot {
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+  background-color: red;
+  animation: redDot 2s infinite;
+  position: absolute;
+  top: 15rpx;
+  left: 10rpx;
+}
+
+@keyframes redDot {
+  from {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1.0;
+  }
+}
+
+.livingList .listContent .listItem .livingLeft .image {
+  width: 32.5vw;
+  height: 32.5vw;
+  border-radius: 20rpx;
+}
+
+.livingList .listContent .listItem .livingRight {
+  width: 57.5vw;
+  position: relative;
+}
+
+.livingList .listContent .listItem .livingRight .recDeleteImg {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+
+.livingList .listContent .listItem .livingRight .titleName {
+  font-size: 42rpx;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.livingList .listContent .listItem .livingRight .nickName {
+  font-size: 32rpx;
+}
+
+.livingList .listContent .listItem .livingRight .startTime {
+  font-size: 28rpx;
+  color: #9c9c9c;
+}
+
+.livingList .listContent .listItem .livingRight .goodsList {
+  width: 100%;
+}
+
+.livingList .listContent .listItem .livingRight .goodsList .goodsItem {
+  width: 13.5vw;
+  height: 13.5vw;
+  border-radius: 15rpx;
+  border: 2rpx solid #f5f5f5;
+  margin-right: 4rpx;
+}
+
+.livingList .listContent .listItem .livingRight .goodsList .goodsMore {
+  width: 13.5vw;
+  height: 13.5vw;
+  border-radius: 15rpx;
+  background-color: #e5e5e5;
+  text-align: center;
+  font-size: 26rpx;
+  display: table;
+}
+
+/* 操作面板 */
+
+.operation {
+  width: 90%;
+  height: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 0;
+  margin: 0 auto;
+  font-size: 30rpx;
+}
+
+.addressmor {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  color: #ff5722;
+}
+
+/* 删除 */
+
+.addressmorr {
+  display: flex;
+  align-items: center;
+}
+
+.addressmorr image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 关注列表 */
+
+.headImg {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
+
+.attentionBtn {
+  border-radius: 30rpx;
+  border: 2rpx solid #e5e5e5;
+  padding: 5rpx 15rpx;
+  color: #e5e5e5;
+}
+
+.attentionItem {
+  width: 100%;
+  padding: 5% 2%;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.attentionItem:first-child {
+  border-top: 2rpx solid #e5e5e5;
+}
+
+/* 缺省 */
+
+.defaultStyle {
+  text-align: center;
+  padding: 150rpx;
+  color: #989898;
+}

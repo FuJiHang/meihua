@@ -1,0 +1,4 @@
+<!--pages/customerService/customerService.wxml-->
+<view class='content'>
+  <image mode="widthFix" src="https://bcdj.9oasd.com/images/Customer.jpg" />
+</view>

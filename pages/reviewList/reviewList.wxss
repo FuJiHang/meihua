@@ -1,0 +1,96 @@
+/* pages/reviewList/reviewList.wxss */
+#reviewList{
+  width: 100%;
+  background: #FFFFFF;
+}
+.RL-beforCheck-box{
+  width: 100%;
+
+}
+.RL-beforCheck-top-line{
+  width: 100%;
+  background: #F5F5F5;
+  height: 20rpx;
+}
+.RL-beforCheck-list-box{
+  width: 96%;
+  height: 124rpx;
+  display: flex;
+  /* background: red; */
+  position: relative;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #F5F5F5;
+  align-items: center;
+}
+.RL-beforCheck-list-box2{
+  width: 100%;
+  height: 68rpx;
+  display: flex;
+  /* background: red; */
+}
+.RL-beforCheck-list-img{
+  width: 68rpx;
+  height: 68rpx;
+  /* background: red; */
+}
+.RL-beforCheck-list-img image{
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 4rpx;
+}
+.RL-beforCheck-list-title-box{
+  width: 100%;
+  /* display: flex; */
+}
+.RL-beforCheck-list-title-box2{
+  height: 50%;
+  display: flex;
+  margin-left: 21rpx;
+  /* #666666 */
+}
+.RL-beforCheck-list-title-box2 view{
+  font-size: 28rpx;
+  color:  #666666;
+  height: 34rpx;
+  line-height: 34rpx;
+
+}
+.RL-beforCheck-list-title-box2 span{
+  font-size: 24rpx;
+  color:  #666666;
+  margin-left: 30rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.RL-beforCheck-list-title-box2 li{
+  font-size: 24rpx;
+  color: #F56F68;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+
+.RL-beforCheck-list-tip-box{
+  height: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 21rpx;
+}
+.RL-beforCheck-list-tip-box view{
+  height: 25rpx;
+  line-height: 25rpx;
+  background: #F5B168;
+  color: #FFFFFF;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  width: 60rpx;
+  text-align: center;
+}
+.RL-beforCheck-list-tip-box span{
+  color: #999999;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.RL-beforCheck-list-right{
+  padding-right: 50rpx;
+  /* margin-left: 50rpx; */
+}

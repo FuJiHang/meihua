@@ -1,0 +1,26 @@
+<!-- pages/mySuperior/mySuperior.wxml -->
+<!-- <text>pages/mySuperior/mySuperior.wxml</text> -->
+<view class="person">
+  <!-- 头部 -->
+  <view class="person-title" style="background-image: url('../../images/personal_bg.png') ">
+    <view class="title-left">
+      <image class="" src=""></image>
+    </view>
+    <view class="title-right">
+      <view class="name">韩辛智</view>
+     <view class="person-address-box">
+      <text class="iconfont  location"></text>
+      <view class="person-address">
+        <text>广东省</text><text>广州市</text><text>越秀区</text>
+      </view>
+     </view>
+    </view>
+  </view>
+  <!-- 信息 -->
+  <view class="person-info-box">
+    <view class="info-item" >
+      <text class="info-key">手机号码</text>
+      <text class="info-val">13000002213</text>
+    </view>
+  </view>
+</view>

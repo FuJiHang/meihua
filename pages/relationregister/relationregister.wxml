@@ -1,0 +1,19 @@
+<view class="container mt32 font32 borderbott0m">
+    <view class="m24-horizontal mt32 overflow font28 font-color-grey74">Hi,<text style="color:#ff191b;font-weight:bolder">{{NikeName}}</text>，欢迎登录，账号绑定后可一键登录</view>
+    <view class="ml24">
+        <view class="loginpassword borderbott0m ">
+            <text>账号</text>
+            <input bindinput="InputValue" data-key="UserName" maxlength="20" placeholder="请输入用户名/邮箱/手机" placeholderStyle="color:#bdbdbd" type="text"></input>
+        </view>
+    </view>
+    <view class="ml24">
+        <view class="loginpassword">
+            <text class="">密码</text>
+            <input password bindinput="InputValue" data-key="Password" maxlength="20" name="password" placeholder="请输入密码" placeholderStyle="color:#bdbdbd"></input>
+        </view>
+    </view>
+</view>
+<view class="tjiaoname mt32 ">
+    <view class="font28 m24-horizontal mb24">关联后，您的微信账号和商城注册账号都可以登录</view>
+    <button bindtap="SaveAccount" class="other-button-hover font36 pt24 pb24 line_height40">立即绑定 </button>
+</view>

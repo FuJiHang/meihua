@@ -1,0 +1,77 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2020-04-15 10:26:10 
+ * @Last Modified by:   fujihang 
+ * @Last Modified time: 2020-04-15 10:26:10 
+    意见调查反馈
+ */ -->
+<view id="fuOpinion">
+    <!--  -->
+    <view class="navTop">
+        <image class="bg" src="https://file.9oasd.com/bcdj/Storage/master/applet/202004101339008373100.png" mode="widthFix" />
+        <view class="detail">
+            <image class="bg2" src="https://file.9oasd.com/bcdj/Storage/master/applet/202004101346579808180.png" mode="widthFix" />
+            <view class="text">感谢有你，</view>
+            <view class="text">你的加入让美婲欣欣向荣</view>
+            <view class="text">感激有你，</view>
+            <view class="text">你的参与让新人专享活动锦上添花</view>
+            <view class="text">感恩有你，</view>
+            <view class="text">你的反馈将是我们最好的行动指南</view>
+        </view>
+    </view>
+    <view class="tip">店家活动调查问卷</view>
+    <block wx:for="{{postList}}" wx:key="{{index}}">
+        <view class="navTopT">{{item.name}}</view>
+        <view class="input">
+            {{dataInfo?item.val:''}}
+            <input wx:if="{{!dataInfo}}" value="{{item.val}}" bindinput="inputFN" data-name="{{'postList['+index+'].val'}}" />
+        </view>
+    </block>
+    <view class="navTopT">4. 请您对我们操作老师的水平进行评分，满分为
+   10分！</view>
+    <view class="input">
+        <span class="flex" wx:for="{{postList2}}" wx:key="{{index}}">
+            {{item.name}} {{dataInfo?item.val:''}}
+            <input wx:if="{{!dataInfo}}" value="{{item.val}}" bindinput="inputFN" data-name="{{'postList2['+index+'].val'}}" />
+        </span>
+    </view>
+    <view class="navTopT">5. 通过本次活动，您觉得我们有哪些方面还需要提升的呢？</view>
+    <view class="input">
+        <textarea bindinput="inputFN" disabled="{{dataInfo}}" data-name="{{'tishen'}}" value="{{tishen}}"></textarea>
+    </view>
+    <view class="navTopT">6. 您是否知道我们平台转介绍会有佣金奖励呢？</view>
+    <view class="input">
+        <span class="flex" bindtap="chooseFN" data-index="0">
+            <span class="round">
+                <span class="dian {{choose==0?'choose':''}}"></span>
+            </span>
+            是
+        </span>
+        <span class="flex" bindtap="chooseFN" data-index="1">
+            <span class="round">
+                <span class="dian {{choose==1?'choose':''}}"></span>
+            </span>
+            否
+        </span>
+    </view>
+    <van-button bindtap="sumbitFN" wx:if="{{!dataInfo}}">立即提交</van-button>
+    <view class="help">
+        <span class="dian"></span>
+        感谢您的宝贵意见！
+    </view>
+    <view class="help">
+        <span class="dian none"></span>
+        <span class="val">
+            美婲3D眉眼唇定妆术在
+            <span class="color">三个月内</span>
+            补色是最佳时期，如有
+顾客需要补色，请提前联系我们的带队老师，约定补色时
+间。届时也可以咨询第二次活动启动方案。
+        </span>
+    </view>
+    <view class="help">
+        <span class="dian none"></span>
+        <span class="val">美婲3D眉眼唇定妆术在
+        祝您生活愉快~</span>
+    </view>
+</view>

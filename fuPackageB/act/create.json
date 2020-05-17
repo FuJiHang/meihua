@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-picker": "/vant-weapp/dist/picker/index",
+    "van-popup": "/vant-weapp/dist/popup/index",
+    "van-datetime-picker": "/vant-weapp/dist/datetime-picker/index"
+  },
+  "navigationBarTitleText": "门店订单"
+}

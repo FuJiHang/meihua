@@ -1,0 +1,7 @@
+<!-- 渠道邀请码 -->
+<view id="fuYaoQin">
+    <canvas data-mode="content" canvas-id="myCanvasT" id="myCanvasT" />
+    <view class="btn">
+        <button bindtap="saveImg">保存到相册</button>
+    </view>
+</view>

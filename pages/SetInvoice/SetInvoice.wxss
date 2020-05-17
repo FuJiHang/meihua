@@ -1,0 +1,127 @@
+page {
+    background: #f0f0f0;
+    padding-bottom: 96rpx;
+}
+
+.invoiceBox {
+    padding-top: 24rpx;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-top: 24rpx;
+    background: #ffffff;
+}
+
+.invoice_div {
+    border-bottom: 1rpx #f0f0f0 solid;
+    padding: 24rpx 0;
+    padding-left: 24rpx;
+    overflow: hidden;
+}
+
+.invoice_div label {
+    width: 176rpx;
+    float: left;
+    margin-right: 16rpx;
+    color: #515151;
+    font-size: 30rpx;
+    line-height: 56rpx;
+}
+
+.invoice_tab text {
+    background: #f0f0f0;
+    color: #515151;
+    font-size: 24rpx;
+    line-height: 56rpx;
+    text-align: center;
+    padding: 16rpx;
+    margin-right: 24rpx;
+    border-radius: 8rpx;
+}
+
+.invoice_tab text.active {
+    background: #ffcc33;
+}
+
+.sure-btn {
+    background: #ffcc33;
+    position: fixed;
+    bottom: 0;
+    font-size: 32rpx;
+    padding: 24rpx;
+    line-height: 48rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.invoice_style {
+    float: left;
+    width: 120rpx;
+    margin-right: 48rpx;
+    font-size: 30rpx;
+    color: #515151;
+    line-height: 56rpx;
+}
+
+.invoice_style label {
+    width: 44rpx;
+    height: 44rpx;
+    margin-right: 8rpx;
+    float: left;
+}
+
+.invoice_style .sel_checked {
+    width: 44rpx;
+    height: 44rpx;
+    background: url(../../images/checked.png-do-not-use-local-path-./pages/SetInvoice/SetInvoice.wxss&11&69) center center no-repeat;
+    background-size: 22rpx auto;
+}
+
+.invoice_style .sel_check {
+    background: url(../../images/check.png-do-not-use-local-path-./pages/SetInvoice/SetInvoice.wxss&12&39) center center no-repeat;
+    background-size: 22rpx auto;
+}
+
+.invoice_style text {
+    background: #ffcc33;
+    line-height: 56rpx;
+    border-radius: 8rpx;
+    padding: 16rpx;
+    font-size: 24rpx;
+}
+
+.input-name {
+    font-size: 30rpx;
+    line-height: 56rpx;
+}
+
+.message {
+    padding: 24rpx;
+    padding-bottom: 8rpx;
+    padding-right: 0;
+    background: #f0f0f0;
+    color: #747474;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.tax-des {
+    background: #fff8e1;
+    line-height: 40rpx;
+    color: #747474;
+    font-size: 24rpx;
+    margin-left: 192rpx;
+    margin-top: 16rpx;
+    padding-left: 8rpx;
+}
+
+.fontweight {
+    font-weight: 600;
+}
+
+.small-name {
+    font-size: 24rpx;
+    font-weight: normal;
+}

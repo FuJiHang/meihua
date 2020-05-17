@@ -1,0 +1,170 @@
+page {
+  width: 100%;
+  height: 100vh;
+}
+
+.padding-l-10 {
+  padding-left: 10rpx;
+}
+
+.padding-r-10 {
+  padding-right: 10rpx;
+}
+
+.padding-t-20 {
+  padding-top: 20rpx;
+}
+
+/* pages/component/nav/nav.wxss */
+.VerticalBox {
+  height: 100vh;
+  background: #f8f8f8;
+}
+
+.VerticalNav.nav {
+  width: 200rpx;
+  white-space: initial;
+  height: 100vh;
+}
+
+.VerticalNav.nav .cu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+  height: 80rpx;
+  position: relative;
+  font-size: 28rpx;
+  text-align: left;
+  color: #888888;
+  line-height: 36rpx;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #fff;
+  color: #212121;
+}
+
+.cu-list {
+  position: relative;
+  background: #fff;
+  padding-left: 10rpx;
+}
+
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  height: 40rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color: #f56f68;
+  top: 0;
+  right: 0rpx;
+  border-radius: 3px;
+  bottom: 0;
+  margin: auto;
+}
+
+.VerticalBox {
+  display: flex;
+}
+
+.VerticalMain {
+  background-color: #f1f1f1;
+}
+
+.my-search {
+  background: #fff !important;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  padding: 0 !important;
+  color: #373737;
+}
+
+.cu-bar .search-form input {
+  width: 589rpx !important;
+  height: 80rpx !important;
+  background: #f8f8f8;
+  border-radius: 40px;
+  box-sizing: border-box;
+}
+
+.search-form {
+  margin-right: 30 !important;
+  margin-left: 30rpx;
+}
+
+.cu-bar {
+  box-sizing: border-box;
+  min-height: 10rpx;
+  font-size: 24rpx;
+  justify-content: center !important;
+}
+
+.cu-list .cu-item {
+  position: relative;
+}
+
+.cu-list .cu-item:after {
+  position: absolute;
+  content: "";
+  width: 511rpx;
+  bottom: 0;
+  left: 50%;
+  margin-left: -255rpx;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.my-content {
+  padding: 30rpx 13rpx;
+  flex: 1;
+}
+
+.my-content .detail {
+  margin-top: 17rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.my-content .name {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+
+.my-content .fl-left {
+  width: 120rpx;
+}
+
+.my-content .ite {
+  margin-bottom: 10rpx;
+}
+
+.my-content .ite .use {
+  margin-left: 21rpx;
+  width: 66rpx;
+  height: 27rpx;
+  background: #f56f68;
+  border-radius: 6rpx;
+  font-size: 18rpx;
+  color: #fff;
+}
+
+.my-content .ite .used {
+  background: gainsboro;
+}
+
+.cover {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 23rpx;
+}

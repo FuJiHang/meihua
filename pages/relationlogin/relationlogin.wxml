@@ -1,0 +1,18 @@
+<view class="bg-f5">
+    <view class="uselogos">
+        <view class="usetitle">
+            <view>
+                <image class="uselogo" mode="aspectFill" src="{{HeadImg}}" style="margin:0 auto"></image>
+            </view>
+            <view class="userinfo">{{UserName}}</view>
+        </view>
+    </view>
+    <view class="m24-horizontal mt32 overflow font28 font-color-grey74">为了给您更好的服务，请关联一个已绑定手机号的账号</view>
+    <view class="tjiaoname m24-horizontal mt32 ">
+        <button bindtap="quickRegister" class="font36 pt24 pb24 line_height40" type="primary">快速注册 </button>
+        <view class="huoze line_height32 font24">
+            <view>已有账号</view>
+        </view>
+        <button bindtap="quickLogin" class="other-button-hover">立即关联</button>
+    </view>
+</view>

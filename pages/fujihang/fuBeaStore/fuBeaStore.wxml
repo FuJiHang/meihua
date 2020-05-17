@@ -1,0 +1,210 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2019-05-17 09:34:37 
+ * @Last Modified by: fujihang
+ * @Last Modified time: 2019-05-17 09:35:10
+    新美丽金商城
+*/ -->
+<view id="fuBeaStore"> 
+    
+    <!-- 轮播图 -->
+    <swiper
+        autoplay="{{true}}"
+        interval="{{3000}}"
+        style="height:{{imgheights[current]}}rpx;" bindchange="bindchange"
+        >
+        <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <image data-id='{{index}}' bindload="imageLoad" mode='widthFix' src="{{item.PhotoPath+'?x-oss-process=image/resize,l_640'}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+    </swiper>
+
+    <!-- 最新消息 -->
+    <view class="newNews">
+        <span class="name">最新消息</span>
+        <van-icon name="volume-o" size="{{'35rpx'}}" color="{{'#F56F68'}}"/>
+        <span class="new">
+            <van-notice-bar
+            color="{{'#666'}}"
+            backgroundColor="{{'#fff'}}"
+                text="{{news}}"
+            />
+        </span>
+        
+    </view>
+
+
+
+
+    <!-- 热门 -->
+    <!-- <view class="navBar">
+        <span class="name">热门推荐</span>
+        <span class="val" bindtap="showFN">筛选</span>
+        <image  bindtap="showFN" src="{{imgUrl+'shaixuan.png'}}" />
+    </view> -->
+    <view class="hotProduct">
+        <view class="leftHP" data-CostPrice="{{hotList[0].CostPrice}}" data-GiftId="{{hotList[0].GiftId}}" bindtap="buyFN">
+            <view class="name">{{hotList[0].Name}}</view>
+            <view class="img">
+                <image mode="aspectFill" src="{{hotList[0].ImageUrl+'?x-oss-process=image/resize,l_640'}}" />
+            </view>
+            <view class="val" wx:if="{{hotList[0].NeedPoint}}">
+                <image src="{{imgUrl+'fujinQian.png'}}" />
+                <span class="num">{{hotList[0].NeedPoint}}</span>
+                <span class="meili">美丽金</span>
+            </view>
+        </view>
+        <view class="rightHP">
+            <view class="childPro border" data-CostPrice="{{hotList[1].CostPrice}}" data-GiftId="{{hotList[1].GiftId}}" bindtap="buyFN">
+                <view class="contant">
+                    <view class="name">{{hotList[1].Name}}</view>
+                    <view class="det">{{hotList[1].ShortDescription}}</view>
+                    <view class="val">
+                        <image src="{{imgUrl+'fujinQian.png'}}" />
+                        <view class="ovFU" wx:if="{{hotList[1].NeedPoint}}">
+                            <span class="num">{{hotList[1].NeedPoint}}</span>
+                            <span class="meili">美丽金</span>
+                        </view>
+                        
+                    </view>
+                </view>
+                <image mode="aspectFill" class="productImg" src="{{hotList[1].ImageUrl+'?x-oss-process=image/resize,l_640'}}" />
+            </view>
+            <view class="childPro" data-CostPrice="{{hotList[2].CostPrice}}" data-GiftId="{{hotList[2].GiftId}}" bindtap="buyFN">
+                <view class="contant">
+                    <view class="name">{{hotList[2].Name}}</view>
+                    <view class="det">{{hotList[2].ShortDescription}}</view>
+                    <view class="val">
+                        <image src="{{imgUrl+'fujinQian.png'}}" />
+                        <view class="ovFU" wx:if="{{hotList[2].NeedPoint}}">
+                            <span class="num">{{hotList[2].NeedPoint}}</span>
+                            <span class="meili">美丽金</span>
+                        </view>
+                    </view>
+                </view>
+                <image mode="aspectFill" class="productImg" src="{{hotList[2].ImageUrl+'?x-oss-process=image/resize,l_640'}}" />
+            </view>
+        </view>
+    </view>
+
+
+    
+    <!-- 三次修改系列 -->
+    <view class="typefun" wx:if="{{typeList[0].AttributeImage}}">
+        <image mode="widthFix" bindtap="toMore" data-index="{{typeList[0].AttributeId}}" src="{{typeList[0].AttributeImage}}" wx:if="{{typeList[0]}}" />
+    </view>
+
+    <view class="senoud" wx:if="{{senoud.length}}">
+        <span class="child" wx:for="{{senoud}}" wx:key="{{index}}" wx:if="{{index<2}}" data-CostPrice="{{item.CostPrice}}" data-GiftId="{{item.GiftId}}" bindtap="buyFN">
+            <view class="name">{{item.Name}}</view>
+            <image mode="widthFix" src="{{item.ImageUrl}}" />
+        </span>
+    </view>
+
+    <view wx:if="{{typeList.length}}" class="typefun" bindtap="toMore" data-index="{{item.AttributeId}}" wx:if="{{index>0}}" wx:for="{{typeList}}" wx:key="{{index}}">
+        <image mode="widthFix"  src="{{item.AttributeImage}}"  />
+    </view>
+
+    <!-- 女性 -->
+    <view wx:for="{{fisrtData}}" wx:for-item="items" wx:for-index="indexs" wx:key="{{indexs}}" wx:if="{{items.child.length!=0&&items.child}}">
+        <view class="navBar" bindtap="toMore" data-index="{{items.AttributeId}}">
+            <span class="name">{{items.AttributeName}}</span>
+            <span class="val">更多</span>
+            >>
+        </view>
+        <view class="productCont">
+            <!-- <view class="proMargin"> -->
+
+            
+                <view class="product" wx:for="{{items.child}}" data-CostPrice="{{item.CostPrice}}" data-GiftId="{{item.GiftId}}" wx:key="{{index}}" bindtap="buyFN">
+                    <view class="jiaoZiPi">
+                        <view class="img">
+                            <image src="{{item.ImageUrl+'?x-oss-process=image/resize,l_640'}}" mode="aspectFill"/>
+                        </view>
+                        <view class="name">{{item.Name}}</view>
+                        <!-- <view class="det">{{item.ShortDescription}}</view> -->
+                        <view class="detG">
+                            <span class="flex" wx:if="{{item.NeedPoint}}">
+                                <image src="{{imgUrl+'fujinQian.png'}}" />
+                                {{item.NeedPoint}} 美丽金
+                            </span>
+                            
+                            <span class="collectG {{item.IsCollected=='True'?'coll':''}}" data-indexs="{{indexs}}" data-index="{{index}}"  data-GiftId="{{item.GiftId}}" catchtap="collFN">
+                                <van-icon name="like" color="#F56F68" />
+                                <view class="col">{{item.IsCollected=='True'?'已收藏':'收藏'}}</view>
+                                
+                            </span>
+                        </view>
+                        <view class="btnG">
+                            <van-button size="small" data-CostPrice="{{item.CostPrice}}" data-GiftId="{{item.GiftId}}" >
+                                立即兑换
+                            </van-button>
+                        </view>
+                        <!-- <view class="val">
+                            <image src="{{imgUrl+'fujinQian.png'}}" />
+                            <view class="ovFU">
+                                <span class="bea">
+                                    <span class="num">{{item.NeedPoint}}</span>
+                                    美丽金
+                                </span>
+                                <span class="xjin">
+                                    +
+                                    <span class="num">{{item.CostPrice}}</span>
+                                    现金
+                                </span>
+                            </view>
+                            
+                        </view> -->
+                        <!-- <view class="btnFU">
+                            <view class="chaozuo">
+                                <view class="collect {{item.IsCollected=='True'?'coll':''}}" data-indexs="{{indexs}}" data-index="{{index}}"  data-GiftId="{{item.GiftId}}" bindtap="collFN">
+                                    <van-icon name="like" />
+                                    加入收藏
+                                </view>
+                            
+                                <view class="btn">
+                                    <van-button size="small" data-CostPrice="{{item.CostPrice}}" data-GiftId="{{item.GiftId}}" bindtap="buyFN">
+                                  
+                                        <image src="{{imgUrl+'fujinQianB.png'}}"  class="bImg"/>立即兑换
+                                    </van-button>
+                                </view>
+                            </view>
+                        </view> -->
+                    </view>
+                </view>
+            <!-- </view> -->
+        </view>
+    </view>
+
+    <!-- 筛选 -->
+    <van-popup
+        show="{{ show }}"
+        position="right"
+        bind:close="onClose"
+        >
+        <view class="skuContant" wx:for="{{chooseList}}" wx:key="{{indexs}}" wx:for-index="indexs" wx:for-item="fitem">
+            <view class="name">{{fitem.name}}</view>
+            <view class="sku">
+
+                <span bindtap="chooseFN" class="child {{index==fitem.index?'choose':''}}" data-findex="{{indexs}}" data-index="{{index}}" wx:for="{{fitem.child}}" wx:key="{{index}}">
+                    <view class="val">{{item.name}}</view>
+                    <view class="bfb" wx:if="{{item.val}}">{{item.val}}的选择</view>
+                </span>
+            </view>
+        </view>
+
+
+        <view class="btnPP">
+             <van-button round size="small" bindtap="seachFN">确定</van-button>
+        </view>
+       
+    </van-popup>
+
+    <view class="konbai"></view>
+          <!-- 底部导航条  -->
+    <view class="navBarFu">
+        <view bindtap="toFNavc" data-to="{{item.to}}" class="child {{2==index?'max':''}}  {{xz==index?'black':''}}" wx:for="{{navBar}}" wx:key="index" data-index="{{index}}" >
+            <image  mode="aspectFill" src="{{imgUrl+item.img}}" data-index="{{index}}"/>
+            <text class="name" data-index="{{index}}">{{item.name}}</text>
+        </view>
+    </view>
+</view>

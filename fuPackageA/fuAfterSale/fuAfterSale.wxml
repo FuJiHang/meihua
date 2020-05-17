@@ -1,0 +1,23 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2019-07-15 17:00:12 
+ * @Last Modified by: fujihang
+ * @Last Modified time: 2019-07-15 17:00:32
+    售后服务
+*/ -->
+<view id="fuAfterSale">
+    <!-- asdhhj -->
+    <view  wx:for="{{dataInfo}}" wx:key="{{index}}">
+        <view class="navTapS">
+            <image src="{{imgUrl+item.img}}" mode="aspectFill" />
+            <span class="name">{{item.name}}</span>
+        </view>
+        <view class="val">
+            {{item.val}}
+        </view>
+
+
+    </view>
+    
+
+</view>

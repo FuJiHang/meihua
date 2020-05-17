@@ -1,0 +1,107 @@
+<!--pages/createLiving/createLiving.wxml-->
+<!-- 上传图片 -->
+<view class='uploadPic' wx:if="{{!false}}">
+  <image class='images' mode='widthFix' src="{{ImageUrl}}"></image>
+  <view class='uploadBtn' bindtap='uploadPic'>上传封面</view>
+</view>
+<!-- 表单 -->
+<view class='add-addr-wrap'>
+  <!-- 标题 -->
+  <view class='input-wrap'>
+    <label>房间标题
+      <span>*</span>
+    </label>
+    <input type='text' bindinput="writeTitle" value="{{roomTitle}}" placeholder='请输入房间标题(0/15)' placeholder-class='placeHolder' />
+  </view>
+  <!-- 时间 -->
+  <view class='input-wrap'>
+    <label>预播时间
+      <span>*</span>
+    </label>
+    <picker mode="date" value="{{date}}" start="{{nowTime}}" bindchange="bindDateChange">
+      <text class='placeHolder'>{{date}}</text>
+      <i class="right-arrow"></i>
+    </picker>
+    <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+      <text class='placeHolder'>{{time}}</text>
+    </picker>
+  </view>
+  <!-- 是否默认 -->
+  <view class='input-wrap' wx:if="{{false}}">
+    <label>设置默认
+      <span>*</span>
+    </label>
+    <radio-group class="radio-group" bindchange="radioDefaultChange">
+      <label class="radioDefault" wx:for="{{defaultOption}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" /> {{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <!-- 标签 -->
+  <view class='input-wrap'>
+    <label>选择分类</label>
+    <view bindtap="selectSort">
+      <view class='sort' style="{{selectSortItem.TypeName?'color:#1E90FF;font-weight: bold':''}}">{{selectSortItem.TypeName?'# '+selectSortItem.TypeName:'选择合适分类会有更多点击~'}}</view>
+      <i class="right-arrow"></i>
+    </view>
+  </view>
+  <view class='input-wrap textarea'>
+    <label>标识描述</label>
+    <textarea bindinput='onGetRemark' maxlength="50" value="{{RoomDes}}" placeholder="填写文字限制在50字以内"></textarea>
+  </view>
+</view>
+<!-- 条件 -->
+<view class='condition'>
+  <view class='condition-wrap'>
+    <label>适用条件
+      <span>*</span>
+    </label>
+    <view class='useCondition'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <view class="radio" wx:for="{{items}}">
+          <radio color="#13A2F3" value="{{item.name}}" checked="{{item.checked}}" /> {{item.value}}
+        </view>
+      </radio-group>
+    </view>
+  </view>
+  <view class='condition-wrap' hidden="{{!selectRadio}}">
+    <label>适用会员
+      <span>*</span>
+    </label>
+    <checkbox-group bindchange="checkboxChange">
+      <view class="checkbox" wx:for="{{MemberGradeList}}">
+        <checkbox bindtap="checkboxSelect" data-index='{{index}}' data-Commission='{{item.Commission}}' value="{{item.GradeId}}" /> {{item.Name}}
+        <view class='payChannel'>
+          需支付
+          <input value='{{item.Commission}}' data-index='{{index}}' bindfocus="bindfocus" bindinput="bindinput" type='number'></input>元
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+</view>
+<!-- 商品 -->
+<view class='goodsContent'>
+  <view class='condition-wrap disflex'>
+    <label>关联商品</label>
+    <navigator url='/pages/productSelect/productSelect' hover-class='none'>
+      <view class='disflex' style='font-size:14px;'>
+        <view style='position: relative;'>
+          <view class='selectNum' wx:if="{{selectNum != 0}}">
+            {{selectNum}}
+          </view>
+          查看全部</view>
+        <view class='arrowRight'></view>
+      </view>
+    </navigator>
+  </view>
+  <scroll-view class="goodsList" scroll-x="true" style="width: 100%" wx:if="{{selectNum === 0}}">
+    <view class='goodsItem' wx:for="{{LiveProductList}}" wx:key="{{item.ProductId}}">
+      <image class='images' src="{{item.ThumbnailUrl160}}"></image>
+      <checkbox class='goodsSelect' value="{{index}}" data-index='{{index}}' checked='{{ischecked}}' bindtap="checkboxGoodsChange" />
+      <view class='goodsPrice'>￥{{item.SalePrice}}</view>
+    </view>
+  </scroll-view>
+</view>
+<view class='btn-wrap'>
+  <button bindtap='onSubmit'>{{editType === 0?'创建直播间':'确定修改并保存直播间'}}</button>
+</view>

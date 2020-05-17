@@ -1,0 +1,31 @@
+<!-- pages/evaluate/evaluate.wxml -->
+<view class="comment-head">
+  <view class="comment-title">项目服务评价(998)</view>
+  <view class="comment-title-cont">
+    <view>全部(998)</view>
+    <view>好评(998)</view>
+    <view>中评(998)</view>
+    <view>差评(998)</view>
+    <view>晒图(998)</view>
+  </view>
+</view>
+<view  class="comment-item" >
+  <view class="comment-box">
+    <view class="comment-box-cont">
+      <view class="comment-box-name">666666的评论：</view>
+      <view class="comment-box-date">2019/02/20 16:12:12</view>
+    </view>
+    <view class="comment-cont">
+      <view class="comment-cont-text">多渠道群群群多无多无</view>
+      <view class="touxiang"><image/></view>
+      <view class="items">
+        <view class="items-title">芭比没嫁妆</view>
+        <image src="../../images/start.png" alt=""/>
+        <image src="../../images/start.png" alt=""/>
+        <image src="../../images/start.png" alt=""/>
+        <image src="../../images/start.png" alt=""/>
+        <image src="../../images/start.png" alt=""/>
+    </view>
+    </view>
+  </view>
+</view>

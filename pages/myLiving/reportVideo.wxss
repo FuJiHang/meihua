@@ -1,0 +1,175 @@
+/* pages/myLiving/reportVideo.wxss */
+
+page {
+  height: 100%;
+  /* background-color: #141414; */
+}
+
+.disflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 用户信息 */
+
+.userInfo {
+  width: 90%;
+  margin: 10rpx auto;
+  color: #444;
+}
+
+.userInfo .left image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.userInfo .left .fans{
+  color: #f9719a;
+  font-size: 26rpx;
+  margin-right: 30rpx
+}
+
+.userInfo .right1 {
+  width: 150rpx;
+  height: 60rpx;
+  color: #fff;
+  background: #f9719a;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.right2{
+  width: 150rpx;
+  height: 60rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background:#ccc;
+  color: #8d8d8d;
+}
+/* 视频信息 */
+
+.roomInfo {
+  width: 100%;
+  margin: 25rpx auto;
+}
+
+.roomName {
+  width: 90%;
+  font-size: 42rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.roomDes {
+  width: 95%;
+  font-size: 32rpx;
+  color: #8d8d8d;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  margin: 10rpx auto;
+}
+
+/* 操作 */
+
+.operation {
+  width: 100%;
+  margin: 10rpx 0 20rpx;
+  border-bottom: 2rpx solid #ccc;
+  padding-bottom: 10px;
+}
+.operation .icon {
+  text-align: center;
+  font-size: 28rpx;
+  color: #8d8d8d;
+}
+.operation .icon image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 15rpx;
+  filter: invert(49%) sepia(3%) saturate(19%) hue-rotate(338deg) brightness(91%) contrast(88%);
+}
+.unPraise{
+  transform: rotateX(180deg);
+}
+.scaleDraw{
+  animation: scaleDraw 5s ease-in-out 0s 1 alternate forwards;
+}
+@keyframes scaleDraw {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+.shareBtn{
+	width: 100%;
+	height: 100%;	
+	opacity:0;
+	position: absolute;
+	top: 0;
+	right: 0;
+  z-index: 2;
+}
+
+
+/* 录播列表 */
+
+.reportList {
+  width: 100%;
+}
+
+.scroll-x {
+  height: 100%;
+  white-space: nowrap;
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.view-parent {
+  display: inline-block;
+  width: 33vw;
+  margin: 5px;
+}
+
+.view-item {
+  width: 95%;
+  height: 8vh;
+  border-radius: 10rpx;
+  border: 2rpx solid #ccc;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 30rpx;
+  line-height: 8vh;
+  padding-left: 15rpx;
+  
+}
+
+.click {
+  color: #f9719a;
+  border: 2rpx solid #f9719a;
+  box-shadow: 0px 0px 2px;
+}

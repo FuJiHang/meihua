@@ -1,0 +1,4 @@
+<!--pages/project/project.wxml-->
+
+<import src="../common/templeates.wxml"></import>
+<template is = "temp_155" > </template>

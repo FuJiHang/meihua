@@ -1,0 +1,52 @@
+<!-- /*
+ * @Author: fujihang 
+ * @Date: 2019-12-18 20:23:05 
+ * @Last Modified by:   fujihang 
+ * @Last Modified time: 2019-12-18 20:23:05 
+    购买优惠券
+ */ -->
+<view id="fuBuyCoupon">
+    <view class="couponGanT disableF" wx:for="{{dataList}}" wx:for-index="indexs" wx:for-item="itemc" wx:key="{{indexs}}" bindtap="chooseFN" data-data="{{itemc}}">
+        <view class="letfCon">
+            <view class="contant">
+                <view class="name">
+                    {{itemc.Price}}元
+                    <span>抵用券</span>
+                </view>
+                <view class="role">使用规则：所购买的商品金额必须大于或等于{{itemc.OrderUseLimit}}元</view>
+                <view class="time">{{itemc.ClosingTime}}过期</view>
+            </view>
+        </view>
+        <view class="rightCon">
+            <view class="contantR">
+                <view class="buyName">购买价格</view>
+                <view class="pirce">{{itemc.BuyPrice}}元</view>
+                <view class="btn">立即购买</view>
+            </view>
+        </view>
+        <view class="middren">
+            <view class="fenSe">
+                <view class="bg"></view>
+            </view>
+        </view>
+    </view>
+    <view class="noMore" wx:if="{{finsh}}">没有更多的了~~~</view>
+    <!--  -->
+    <!--  -->
+    <van-popup show="{{show}}" bindtap="onCloseP" position="bottom" bind:close="onCloseP">
+        <view class="iosJJ">
+            <view class="child" wx:for="{{personData}}" wx:key="{{index}}">
+                {{item.name}}
+                <input value="{{item.val}}" catchtap placeholder="{{item.plr}}" bindinput="changeInput" data-name="{{'personData['+index+'].val'}}" />
+            </view>
+            <view class="btn">
+                <span class="flex">
+                    <van-button size="small" bindtap="onCloseP">取消</van-button>
+                </span>
+                <span class="okFN flex">
+                    <van-button size="small" catchtap="payOrder">确定</van-button>
+                </span>
+            </view>
+        </view>
+    </van-popup>
+</view>

@@ -1,0 +1,34 @@
+<view class="act-container">
+  <view class="act-warp">
+    <view class="item-top">
+      <view class="title text-center margin-b-30">恭喜你，抢购成功</view>
+      <view class="title-2 text-center">{{actData.StoreName}}</view>
+      <view class="content">
+        <view class="item flex-center margin-b-30">
+          <view class="a-left act-gray">姓 名：</view>
+          <view class="a-right flex-col-1">{{actData.RealName}}</view>
+        </view>
+        <view class="item flex-center margin-b-30">
+          <view class="a-left act-gray">手机号：</view>
+          <view class="a-right flex-col-1">{{actData.CellPhone}}</view>
+        </view>
+      </view>
+      <view class="line margin-t-10"></view>
+      <view class="content margin-t-50">
+        <view class="item flex-center margin-b-30" wx:for="{{actData.Products}}" wx:key="{{index}}">
+          <view class="a-left act-gray" >{{!index?'赠送项目：':''}}</view>
+          <view class="product flex-col-1 act-gray">{{item.Name}} * {{item.MaxTime}}</view>
+          <view class="act-gray">{{item.Price}}元</view>
+          <view bindtap="useFN" data-id="{{item.Id}}" class="a-use flex-content-center {{item.UseTime==0?'act-bg-gray':''}}">{{item.UseTime}}/{{item.MaxTime}}</view>
+        </view>
+         <view class="item flex-center margin-b-30" >
+          <view class="a-left act-gray" >赠送礼品：</view>
+          <view class="product flex-col-1 act-gray">{{actData.GiftName?actData.GiftName:'无'}} </view>
+          <view class="act-gray">{{actData.MarketPrice}}元</view>
+          <view bindtap="getFN" data-id="{{actData.Id}}" class="a-use flex-content-center ">{{actData.IsGetGift?'已领取':'未领取'}}</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

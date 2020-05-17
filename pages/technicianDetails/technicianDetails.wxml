@@ -1,0 +1,77 @@
+<!-- pages/ technicianDetails/ technicianDetails.wxml -->
+
+<view id="fujiJISHI">
+<view class='head_pic_box'>
+  <image src="{{technicianObj.HeadPortrait+'?x-oss-process=image/resize,l_640'}}" mode='widthFix'></image>
+</view>
+<view class='technicianContent'>
+  <view class='name'>{{technicianObj.Name}}</view>
+  <view class='grade'>{{technicianObj.GradeName}}</view>
+  <view class='Specialize'>
+    <text>擅长</text>{{technicianObj.Specialize}}</view>
+  <view class='Specialize desc'>{{technicianObj.Introduce}}</view>
+</view> 
+<van-tabs active="{{active}}" bind:change="onChange" sticky='true' swipeable='true' line-width="30">
+  <van-tab title="作品案例">
+    <image src="{{technicianObj.WorksCase+'?x-oss-process=image/resize,l_1080'}}" mode="widthFix" class="worksImg"/>
+  </van-tab>
+  <van-tab title="服务项目">
+    <view class="project-item" wx:for="{{technicianObj.Programs}}" wx:key="{{index}}" data-index="{{index}}" bindtap="toStoreFN">
+      <view class="item-left" data-index="{{index}}">
+        <image src="{{item.ThumbnailUrl220+'?x-oss-process=image/resize,l_640'}}"></image>
+      </view>
+      <view class="item-right" data-index="{{index}}">
+        <view class="title">{{item.ProductName}}</view>
+        <view class="content">{{item.Description}}</view>
+        <view class="price">￥{{item.SalePrice}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="用户评价">
+    <view class='evaluateList' wx:for="{{technicianObj.Reviews}}">
+      <view class='evaluateItem'>
+        <image class='leftImg' src="{{item.Picture+'?x-oss-process=image/resize,l_640'}}"></image>
+        <view class='evaluateRight'>
+          <!-- 头 -->
+          <view class='evaluateName'>
+            <view>{{item.RealName}}
+              <view class='evaluateStatus'>
+                <image src="{{imgUrl}}{{item.AppraiseScore == 1?'haoping':item.AppraiseScore == 2?'zhongping':'chaping'}}.png"></image>{{item.AppraiseScore == 1?"好评":item.AppraiseScore == 2?"中评":"差评"}}</view>
+            </view>
+            <view>{{item.AddDate}}</view>
+          </view>
+          <!-- 评价 -->
+          <view class='evaluateDesc'>{{item.AppraiseText?item.AppraiseText:"暂无评价"}}</view>
+          <!-- 分数 -->
+          <view class='grade'>
+            <view class=''>技术:
+              <van-rate value="{{item.tecStars}}" size='15' readonly='true' />
+            </view>
+            <view class=''>服务:
+              <van-rate value="{{item.serStars}}" size='15' readonly='true' />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>
+</view>
+
+<view class="share" bindtap="QcodeFN">分享</view>
+
+
+<view class="alertQcode  {{Qcode?'Qcode':''}}" >
+    <view class="exit_c" bindtap="exitImgFN">
+      关闭
+    </view>
+    <view class="img">
+      
+      <image mode="aspectFit" src="{{myQcode}}"/>
+    </view>
+    
+    <view class="info_f" bindtap="saveImgFN">
+      <van-button size="small">保存到本地</van-button>
+    </view>
+    
+  </view>

@@ -1,0 +1,223 @@
+<form>
+  <block>
+    <view class="padding-l-30 padding-r-30 bg-white">
+      <view class="cu-form-group">
+        <view class="title">门店名称</view>
+        <view class="value text-left flex-col-1">{{form.storeName}}</view>
+        <view class="select" bindtap="handleShow" data-type="1">点击选择</view>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">门店地址</view>
+        <input placeholder="请输入门店地址" placeholder-class="input-desc" value="{{form.Address}}" bindinput="inputText" data-type="Address"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">美婲相约</view>
+        <input placeholder="请输入门店手机号" placeholder-class="input-desc" value="{{form.Tel}}" bindinput="inputText" data-type="Tel"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">活动名称</view>
+        <input placeholder="请输入活动名称" placeholder-class="input-desc" value="{{form.ActivityName}}" bindinput="inputText" data-type="ActivityName"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">活动消息</view>
+        <input placeholder="请输入活动消息" placeholder-class="input-desc" value="{{form.TopMsg}}" bindinput="inputText" data-type="TopMsg"></input>
+      </view>
+         <view class="cu-form-group">
+        <view class="title">虚拟销量</view>
+        <input placeholder="请输入虚拟销量" type="number" placeholder-class="input-desc" value="{{form.ShowSaleCounts}}" bindinput="inputText" data-type="ShowSaleCounts"></input>
+      </view>
+      
+      <view class="cu-form-group" bindtap="handleShowPicker" data-type="1">
+        <view class="title">启动日期</view>
+        <view class="picker-text input-desc flex-col-1  text-left" wx:if="{{!form.StartDate}}">
+          开始活动时间
+        </view>
+        <view class="picker flex-col-1 text-left" wx:else>{{form.StartDate}}</view>
+      </view>
+      <view class="cu-form-group" bindtap="handleShowPicker" data-type="2">
+        <view class="title">结束日期</view>
+        <view class="picker-text input-desc flex-col-1 text-left" wx:if="{{!form.EndDate}}">
+          结束活动时间
+        </view>
+        <view class="picker flex-col-1 text-left" wx:else>{{form.EndDate}}</view>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">活动限额</view>
+        <input placeholder="人数" placeholder-class="input-desc" value="{{form.UserLimitCount}}" bindinput="inputText" data-type="UserLimitCount"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">礼品选择</view>
+        <view class="value text-left flex-col-1">{{form.Gifts}}</view>
+        <view class="select" bindtap="handleShow" data-type="2">点击选择</view>
+      </view>
+      <view class="cu-form-group-cus" style="border: none">
+        <view class="cu-list menu-avatar">
+          <block wx:for="{{giftList}}" wx:for-index="index" wx:key="{{index}}">
+            <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:if="{{item.checked}}" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+              <block>
+                <view class="cu-avatar" style="background-image:url({{item.ImageUrl}});"></view>
+                <view class="content text-left padding-r-20">
+                  <view class="text-grey it-title">{{item.Name}}</view>
+                  <view class="text-gray it-desc text-sm text-overflow">
+                    {{item.ShortDescription}}
+                  </view>
+                </view>
+                <view class="move">
+                  <!-- <view class="bg-grey">置顶</view> -->
+                  <view class="bg-th-color" catchtap="remove" data-index="{{index}}">删除</view>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+        <!-- <button bindtap="showModal" data-target="bottomModal" class="append-goods">增加关联商品</button> -->
+      </view>
+      <view class="cu-form-group-cus padding-b-20">
+        <view class="title" style="margin-left: 30rpx">门店二维码</view>
+        <view class="product-list flex-content-center">
+          <view class="upload-img" wx:if="{{form.CodeUrl}}">
+            <!-- <image src='{{form.CodeUrl}}' mode='aspectFill'></image> -->
+            <view class="cover-box" style="background: url({{form.CodeUrl}})center center / cover no-repeat">
+              
+            </view>
+            <view class="del" catchtap="DelImg" data-type="1">
+              <text class="cuIcon-close"></text>
+            </view>
+          </view>
+          <image class="upload-box" src="{{imgUrl+'add.png'}}" mode="widthFix" bindtap="ChooseImage" wx:else></image>
+        </view>
+      </view>
+      <view class="cu-form-group-cus">
+        <view class="title" style="margin-left: 30rpx">赠送项目</view>
+        <view class="product-list" wx:if="{{form.products.length>0}}">
+          <view class="product-container">
+            <view class="item-row flex-center">
+              <view class="item-col">项目名称</view>
+              <view class="item-col">价值</view>
+              <view class="item-col">单位</view>
+              <view class="item-col">数量</view>
+              <view class="item-col last"></view>
+            </view>
+            <view class="item-row flex-center" wx:for="{{form.products}}">
+              <view class="item-col">
+                <input type="text" value="{{item.Name}}" bindinput="inputItem" data-type="Name" data-index="{{index}}" />
+              </view>
+              <view class="item-col">
+                <input type="text" value="{{item.Price}}" bindinput="inputItem" data-type="Price" data-index="{{index}}" />
+              </view>
+              <view class="item-col">
+                <input type="text" value="{{item.Unit}}" bindinput="inputItem" data-type="Unit" data-index="{{index}}" />
+              </view>
+              <view class="item-col">
+                <input type="text" value="{{item.UseTime}}" bindinput="inputItem" data-type="UseTime" data-index="{{index}}" />
+              </view>
+              <view class="item-col last flex">
+                <image class="close margin-l-20" src="{{imgUrl+'close.png'}}" bindtap="removeProduct" data-index="{{index}}"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <button bindtap="addGooods" data-target="bottomModal" class="append-goods">添加新项目</button>
+      </view>
+    </view>
+  </block>
+</form>
+<block>
+  <button class="send-apply" bindtap="submit">提交申请</button>
+</block>
+<block>
+  <view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white">
+        <view class="action text-green"></view>
+        <view class="action text-blue" bindtap="hideModal">
+          <image class="close-image" src="{{imgUrl+'close-2@2x.png'}}" mode="aspectFit"></image>
+        </view>
+      </view>
+      <view class="padding-20">
+        <block>
+          <view class="goods-list">
+            <view class="goods-item flex" wx:for="{{includeProducts}}" wx:for-index="index" wx:key="{{index}}">
+              <view class="avatar margin-r-20" style="background-image:url({{item.ProductImg}})"></view>
+              <view class="content text-left flex-col-1">
+                <view class="goods-name text-overflow">{{item.ProductName}}</view>
+                <view class="goods-price margin-t-50 text-left">￥{{item.ProductPrice}}</view>
+              </view>
+              <view class="action">
+                <checkbox-group bindchange="changeSwitch" data-type="goods" data-index="{{index}}">
+                  <checkbox class="th-color" checked="{{item.checked}}"></checkbox>
+                </checkbox-group>
+              </view>
+            </view>
+          </view>
+        </block>
+        <block>
+          <view class="action act-wrap flex-center">
+            <view class="flex-center">
+              <view class="sel-title margin-r-10">全选</view>
+              <checkbox-group bindchange="changeSwitch" data-type="selectAll">
+                <checkbox class="th-color" checked="{{checkedAll}}"></checkbox>
+              </checkbox-group>
+            </view>
+            <view class="flex-col-1"></view>
+            <button class="link-btn" bindtap="addGooods">确认关联</button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</block>
+<van-popup show="{{ showPicker1 }}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose" data-type="StoreName">
+  <van-picker show-toolbar title="标题" value-key="StoreName" columns="{{ storeList }}" bind:cancel="onCancel" bind:confirm="onConfirm" data-type="1" />
+</van-popup>
+<!-- <van-popup show="{{ showPicker2 }}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose" data-type="Gifts">
+  <van-picker show-toolbar title="标题" value-key="StoreName" columns="{{ storeList }}" bind:cancel="onCancel" bind:confirm="onConfirm" data-type="2" />
+</van-popup> -->
+<van-popup show="{{ showDatePicker1 }}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose" data-type="StartDate">
+  <van-datetime-picker type="datetime" value="{{ form.StartDate }}" min-date="{{ minDate }}" bind:input="onInput" bind:confirm="onConfirm" data-type="StartDate" />
+</van-popup>
+<van-popup show="{{ showDatePicker2 }}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose" data-type="EndDate">
+  <van-datetime-picker type="datetime" value="{{ form.EndDate }}" min-date="{{ minDate }}" bind:input="onInput" bind:confirm="onConfirm" data-type="EndDate" />
+</van-popup>
+<block>
+  <view class="cu-modal bottom-modal {{ showPicker2 ? 'show' : '' }}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white">
+        <view class="action text-green"></view>
+        <view class="action text-blue" bindtap="hideModal">
+          <image class="close-image" src="{{imgUrl+'close-2@2x.png'}}" mode="aspectFit"></image>
+        </view>
+      </view>
+      <view class="padding-20">
+        <block>
+          <view class="goods-list">
+            <view class="goods-item flex" wx:for="{{giftList}}" wx:for-index="index" wx:key="{{index}}">
+              <view class="avatar margin-r-20" style="background-image:url({{item.ImageUrl}})"></view>
+              <view class="content text-left flex-col-1">
+                <view class="goods-name text-overflow">{{item.Name}}</view>
+                <view class="goods-price margin-t-50 text-left">￥{{item.ShortDescription}}</view>
+              </view>
+              <view class="action">
+                <checkbox-group bindchange="changeSwitch" data-type="goods" data-index="{{index}}">
+                  <checkbox class="th-color" checked="{{item.checked}}"></checkbox>
+                </checkbox-group>
+              </view>
+            </view>
+          </view>
+        </block>
+        <block>
+          <view class="action act-wrap flex-center">
+            <view class="flex-center">
+              <view class="sel-title margin-r-10">全选</view>
+              <checkbox-group bindchange="changeSwitch" data-type="selectAll">
+                <checkbox class="th-color" checked="{{checkedAll}}"></checkbox>
+              </checkbox-group>
+            </view>
+            <view class="flex-col-1"></view>
+            <button class="link-btn" bindtap="selectGoods">确定</button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</block>

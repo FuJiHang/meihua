@@ -1,0 +1,31 @@
+<!-- pages/myTeam/myTeam.wxml -->
+<view class="search-box">
+  <view class="search">
+    <input class="text" confirmType="search" placeholder="搜索关键词" placeholderStyle="color:#999999" type="text"></input>
+    <view class="iconfont icon__search iconsearch font40" size="16"></view>
+  </view>
+</view>
+<navigator>
+  <text class="search-btn">搜索</text>
+</navigator>
+<!-- 团队 -->
+<view class="team-box">
+  <view class="team-item">
+    <view class="item-left">
+      <image></image>
+    </view>
+    <view class="item-right">
+      <view class="item-info">
+        <view>
+          <text class="item-info-name">李二狗</text>
+          <text class="item-info-lv">一级</text>
+        </view>
+        <view class="item-info-agencyitem">
+          <text class="item-info-agency">省代</text>
+          <text class="item-info-agency-phone">13511244458</text>
+        </view>
+        <view class=" iconfont icon__arrow_down xian"></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,116 @@
+/* pages/myTeam/myTeam.wxss */
+.search-box {
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  height: 110rpx;
+  line-height: 110rpx;
+  display: flex;
+}
+.search {
+  display: flex;
+  position: absolute;
+  top: 15rpx;
+  left: 24rpx;
+  border-radius: 20px;
+  width: 548rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #F7F7F7;
+  color: #999999;
+  z-index: 1;
+}
+
+.bg-wihte {
+  background: #fff;
+}
+.search-box::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #eee;
+  position: absolute;
+  top: 108rpx;
+  left: 0;
+}
+.search .text {
+  width: 578rpx;
+  /* text-align: center; */
+  margin-left: 67rpx;
+  font-size: 28rpx;
+  height: 72rpx;
+  /* color: #f1cfcd; */
+  line-height: 72rpx;
+  padding-left: 35rpx;
+}
+
+.search .iconsearch {
+  position: absolute;
+  /* color: #f1cfcd; */
+  top:1rpx;
+  left:27rpx;
+
+}
+.search-btn {
+  position: absolute;
+  top: 36rpx;
+  right: 60rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  font-family: 'PingFang-SC-Bold';
+  line-height: 28rpx;
+  /* background-color: red; */
+}
+/* 团队 */
+.team-box {
+  box-sizing: border-box;
+  padding: 0rpx 30rpx 0 30rpx;
+  background-color: pink;
+}
+.team-item {
+  width: 750rpx;
+  height: 124rpx;
+  display: flex;
+}
+.team-item image {
+  width: 68rpx;
+  height: 68rpx;
+  background-color: aqua;
+  margin-top: 28rpx;
+  border-radius: 4px;
+}
+.item-right {
+  margin-left: 20rpx;
+  margin-top: 14rpx;
+}
+.item-right .item-info {
+  color: #666666;
+  position: relative;
+}
+.item-right .item-info-name {
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+.item-right .item-info-lv {
+  font-size: 23rpx;
+}
+.item-info-agencyitem {
+  /* background-color: red; */
+  margin-top: -13rpx;
+}
+.item-info .item-info-agency {
+  text-align: center;
+  display: inline-block;
+  font-size: 22rpx;
+  color: #fff;
+  width: 70rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  background-color: #F5B168;
+  border-radius: 13px;
+}
+.item-info-agencyitem .item-info-agency-phone {
+  color: #666666;
+  font-size: 22rpx;
+  margin-left: 15rpx;
+}

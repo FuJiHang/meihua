@@ -1,0 +1,56 @@
+<view class="act-container">
+  <view class="act-warp">
+    <view class="item-top">
+      <!-- <view class="title text-center margin-b-30">恭喜你，抢购成功</view> -->
+      <!-- <view class="title-2 text-center">上海市浦东新区颜多金纹绣</view> -->
+      <view class="content">
+        <view class="item flex-center margin-b-30">
+          <view class="a-left act-gray">姓 名：</view>
+          <view class="a-right flex-col-1">{{actData.RealName}}</view>
+        </view>
+        <view class="item flex-center margin-b-30">
+          <view class="a-left act-gray">手机号：</view>
+          <view class="a-right flex-col-1">{{actData.CellPhone}}</view>
+        </view>
+      </view>
+      <view class="line margin-t-10"></view>
+      <view class="content margin-t-50">
+        <view class="item flex-center margin-b-30" wx:for="{{actData.Products}}">
+          <view class="a-left act-gray">赠送项目：</view>
+          <view class="product flex-col-1 act-gray">
+            {{item.Name}} * {{item.UseTime}}{{item.Unit}}
+          </view>
+          <view class="act-gray">{{item.Price}}元</view>
+          <!-- {{item.MaxTime - item.UseTime ? 'act-bg-gray' : ''}} -->
+          <view class="a-use flex-content-center " bindtap="setUse" data-index="{{index}}" data-id="{{item.Id}}">
+            {{item.MaxTime }}/{{ item.UseTime}}
+          </view>
+        </view>
+        <view class="item flex-center margin-b-30" >
+          <view class="a-left act-gray">赠送品礼品：</view>
+          <view class="product flex-col-1 act-gray">
+            {{actData.GiftName}} * {{item.UseTime}}{{item.Unit}}
+          </view>
+          <view class="act-gray">{{item.Price}}元</view>
+          <!-- {{item.MaxTime - item.UseTime ? 'act-bg-gray' : ''}} -->
+          <view class="a-use flex-content-center " bindtap="setGet"  data-id="{{actData.GiftId}}">
+            领取
+          </view>
+          
+        </view>
+        <!-- <view class="item flex-center margin-b-30">
+          <view class="a-left act-gray"></view>
+          <view class="product flex-col-1 ">新潮美甲单色 * 1</view>
+          <view class="left act-active">256元</view>
+          <view class="a-use flex-content-center ">已使用</view>
+        </view>
+        <view class="item flex-center margin-b-30">
+          <view class="left act-gray">赠送项目：</view>
+          <view class="product flex-col-1 ">新潮美甲单色 * 1</view>
+          <view class="left act-active">256元</view>
+          <view class="a-use flex-content-center ">已使用</view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>

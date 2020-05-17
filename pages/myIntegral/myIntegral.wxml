@@ -1,0 +1,37 @@
+<!-- pages/myIntegral/myIntegral.wxml -->
+<!-- <text>pages/myIntegral/myIntegral.wxml</text> -->
+<!-- 标题 -->
+<view class="page">
+  <view class="integral-titile">
+  <view class="titile-box">
+    <image src="../../images/list_pic_01@2x.png"></image>
+    <view class="integral-num">550</view>
+    <view class="can-integral">可用积分</view>
+  </view>
+  <view class="integral-btn">
+    <navigator>
+      <text class="btn-text">积分兑换</text>
+    </navigator>
+  </view>
+</view>
+<view class="his-integral">
+  历史积分：
+  <text>10</text>
+</view>
+<view class="integral-record-box">
+  <view class="integral-record-item">
+    <view class="record-titile">
+      消费订单
+      <view class="record-comp">
+        <text class="comp-jia">+</text>
+        <!-- <text class="comp-jian" wx:if{}>-</text> -->
+        <text class="comp-num">10</text>
+      </view>
+      <view class="record-info">
+        <text class="record-date">2019/2/18</text>
+        <text class="record-time">14:23:39</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

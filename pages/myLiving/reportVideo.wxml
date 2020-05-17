@@ -1,0 +1,45 @@
+<!--pages/myLiving/reportVideo.wxml-->
+<view style='width:100%;'>
+  <video src='{{videoUrl}}' id="myVideo" bindplay="playVideo" muted="{{true}}" controls="{{true}}" autoplay="{{false}}" enable-progress-gesture="{{false}}" style='width:100%;'>
+  </video>
+</view>
+<view class='userInfo disflex'>
+  <view class='left disflex'>
+    <image src='{{userInfo.Picture}}'></image>
+    <view>
+      <view>{{userInfo.UserName}}</view>
+      <text class='fans'>粉丝:{{userInfo.AttentionCount}}</text>
+      <text class='fans'>播放:{{playCount}}</text>
+      <text class='fans' wx:if="{{userInfo.TypeName}}">#{{userInfo.TypeName}}</text>
+    </view>
+  </view>
+  <view class='right1' bindtap='onAttention' data-id='{{userInfo.RoomCreateUserId}}' wx:if="{{IsAttention === 0}}">+ 关注</view>
+  <view class='right2' bindtap='onCanceAttention' data-id='{{userInfo.RoomCreateUserId}}' wx:if="{{IsAttention === 1}}">已关注</view>
+</view>
+<view class='roomInfo'>
+  <view class='roomName'>{{userInfo.RoomName}}</view>
+  <view class='roomDes' wx:if="{{userInfo.RoomDes}}">简介：{{userInfo.RoomDes}}</view>
+</view>
+<view class='operation disflex' style='justify-content: space-around'>
+  <view class='icon' bindtap='giveALike'>
+    <image style='{{isPraise?"filter: invert(54%) sepia(90%) saturate(641%) hue-rotate(302deg) brightness(102%) contrast(95%);":""}}' src='../../images/praise.png'></image>
+    <view>{{userInfo.LikeCount}}</view>
+  </view>
+  <view class='icon' bindtap='cancelALike'>
+    <image class='unPraise' src='../../images/praise.png'></image>
+    <view>不喜欢</view>
+  </view>
+  <view class='icon' style='position: relative'>
+    <button class='shareBtn' open-type="share"></button>
+    <image src='../../images/share.png'></image>
+    <view>分享</view>
+  </view>
+</view>
+<!-- 录播列表 -->
+<view class='reportList' wx:if="{{reportList.length > 0}}">
+  <scroll-view scroll-x class="scroll-x">
+    <view wx:for="{{reportList}}" wx:key="{{index}}" class="view-parent">
+      <view class="view-item {{selectNum == index?'click':''}}" data-index='{{index}}' bindtap='selectReport'>{{index+1}}.{{userInfo.RoomName}}</view>
+    </view>
+  </scroll-view>
+</view>

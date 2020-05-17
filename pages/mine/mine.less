@@ -1,0 +1,500 @@
+/* pages/mine/mine.wxss */
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1553654283266'); /* IE9 */
+    src: url('iconfont.eot?t=1553654283266#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAM8AAsAAAAABywAAALuAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqCMIIoATYCJAMICwYABCAFhG0HNRtTBhEVlC1kXx3YxsyHfhAYuu+xw3yLEIn144ACRQ9sUgkN7vcg6sd+e++bGJHsXTSZhMT0TxT1kGh4iHinJPtr7fdu9qMy/WF2X+JPiPqtnO/N3mLTCRVK0ERo0KCZhEZ0Atv9ahelGGBgaQaBeLJGqLzkBTo4OCYhJLaJUUE6OaCW0A/ikST2RK7V/xwzXaQVSH6ggQ1wRlmBo70BjlsHFBF2lOJ3IAfgN4zdRHkQjyHALE47xuofnYV8WmCVALmO2IL8VJCWVssYCX3JwUQeOsY2pW4AWOC/Lx8yAii6DqhpG++j0PldCnNS/a/qpQhE49kB7RhoQA2AFrJLky0QolEJczIhDayrUvBt/39qRtb6z0MGoNwKICoKz0mExadargBoxdERgLleF4F2WrNN4u1x4R/m92727leQruYw4CX9tSdvfWULu85/NL1a9YlbCC9M7gQCx5Pr517z0Zd7WX6p5OQjySjnBpjwM/0s5xEJ1HhtxGSIuVNSrwsgNkiFROL748/GuoQiYdbt6jFObqwNr0sjl/K2hOiLOY+xRyxK579rdQO04W5peKNAa6xXxohLOwHgv8gT6T/wNwQnrr8Gcr6MFi0A7/ekuP+/ErRzA8bzdAnet6hli9aVAI06cqHkUkYSfhREvu7hH/C6+eir9d1cVhj5btFtEItBwyiL1GJrQMeiFvSM6sGswsBxCw8KQtJVAFB2KIBwugDF7hY0nG6RWuw76Ph9gp4zCJj1RNWFFvlwCnsU29KM4vYBOpYMObLowqBymokdf0slJZw2z1TsRDBtprKZARYyNcaWeFdktObIlQywX3iO+b7ESEmXWdq0tY6yySQveyfTkgEUaqYwWzSGQtsOIIdFCnHaWSvM/fw0Rtjh26Jqmjrs8xgl5oyP0kypFsgBZdiq6VreEtslZGgahzhFCqB+wc74MCmhqHyei7FoJrtHPJKVlNrxtkpzfnXwdLsAM6BTAeMELIedXIPaENKnAAAA') format('woff2'),
+    url('iconfont.woff?t=1553654283266') format('woff'),
+    url('iconfont.ttf?t=1553654283266') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1553654283266#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  /* 导入公共模板的样式 */
+  @import "../common/templeates.wxss";
+  page{
+      background: #F7F7F7;
+      height: 100%;
+      width: 100%;
+      -webkit-overflow-scrolling : touch;
+      // overflow: hidden;
+     
+  }
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-center_gold:before {
+    content: "\e60e";
+  }
+  
+  /* ?? */
+  .mine-box{
+    background: #FFFFFF;
+    position: relative; 
+    // height: 100%;
+    // flex: 1;
+    width: 100%;
+    // padding-bottom: 140px;
+    box-sizing: border-box;
+    // overflow: auto;
+    
+    
+  }
+  .konbai{
+    height: 140rpx ;
+  }
+  .overhide{
+    overflow: hidden;
+  }
+  .mine-top{
+    width: 100%;
+    height: 180rpx;
+    /* background: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ff7068;
+    color: #fff ;
+  }
+  .phone{
+    margin-top: 12rpx;
+    font-size: 28rpx;
+  }
+  .mine-hand{
+    width: 190rpx;
+    // height: 180rpx;
+    /* background: burlywood; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mine-hand-img{
+    width: 120rpx;
+    height: 120rpx;
+    background: red;
+    /* position: absolute; */
+    
+  }
+  .mine-msg{
+    width:400rpx;
+    /* background: yellow; */
+    position: relative;
+  }
+  
+   
+  
+  .mine-name{
+    /* width: 50rpx; */
+    height: 50rpx;
+    /* background: red; */
+    // margin-top: 42rpx;
+    line-height: 42rpx;
+  
+  
+  }
+  .imgMH{
+      width: 180rpx;
+      height: 1rpx;
+  }
+  .user-name{
+    font-size: 30rpx;
+    // color: #666666;
+  }
+  .user-type{
+    font-size: 20rpx;
+    margin-left: 30rpx;
+    // color: #666666;
+  }
+  .mine-gold{
+    height: 50rpx;
+    background:white;
+    margin-top: 20rpx;
+    line-height: 42rpx;
+  
+  }
+  .mine-gold text{
+    color: #666666;
+    font-size: 24rpx;
+  }
+  .icon-center_gold{
+    color: #F5C868;
+  }
+  .mine-gold-tx{
+    margin-left: 20rpx;
+  }
+  .gold-num{
+    margin-left: 25rpx;
+  }
+  .mine-two-code{
+    width: 164rpx;
+    position: relative;
+    height: 198rpx;
+    /* background: blueviolet; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .code-box{
+    width: 60rpx;
+    height: 60rpx;
+    /* background: red; */
+    /* margin-left: -20rpx; */
+    
+  }
+  .code-box image{
+    width: 60rpx;
+    height: 60rpx;
+  }
+  .code-box-right{
+    width: 35rpx;
+    height: 35rpx;
+  }
+  .code-box-right image{
+    margin-left: 40rpx;
+    width: 35rpx;
+    height: 35rpx;
+  }
+  .mine-form1 , .nime-form2{
+    background: #F5B168;
+  }
+  .mine-form-state{
+    width: 100%;
+    /* background: red; */
+  }
+  .form-box{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    /* margin-top: 20rpx; */
+  }
+  .form-box view{
+    flex: 1;
+    
+  }
+  .form-state-img , .form-check-img , .form-success-img ,.form-cancel-img{
+    text-align: center;
+    height: 50rpx;
+    margin-top: 20rpx;
+  } 
+  /* 控制图标 */
+  .state-img ,.check-img ,.success-img , .cancel-img {
+    width: 50rpx;
+    height: 50rpx;
+    /* background: yellow; */
+    margin: 0 auto;
+  }
+  .state-img image ,.check-img image, .success-img image , .cancel-img image {
+    width: 50rpx;
+    height: 50rpx;
+  }
+  .form-title{
+    /* background: blue; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  
+  }
+  .form-title view{
+    margin: 15rpx 0 20rpx;
+    color: #999;
+    font-size: 26rpx;
+    letter-spacing: 2rpx;
+    flex-grow: 1;
+  }
+  .mine-common1 , .mine-common2{
+    background: #F568CF;
+  }
+  .mine-common-box{
+    background: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+  
+  }
+  .mine-common-box .common-box{
+    border-bottom: 3rpx solid #F7F7F7;
+    width: 25%;
+    position: relative;
+    height: 168rpx;
+    /* background: red; */
+    text-align: center;
+    
+  
+  }
+  .mine-common-box .common-img{
+    width: 50rpx;
+    height: 50rpx; 
+    /* background: yellow; */
+    margin:auto;
+    margin-top: 30rpx;
+  
+  }
+  .common-img image{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 6rpx;
+  }
+  .mine-common-box .common-text{
+    font-size: 26rpx;
+    color: #999;
+    width: 100%;
+    margin-top: 5rpx;
+    letter-spacing: 3rpx;
+  }
+  
+//   身份切换
+.fuIdCard{
+    .navtTop{
+        padding: 20rpx;
+        font-size: 30rpx;
+        display:flex;
+        align-items: center;
+        box-sizing: border-box;
+        color: #666;
+        border-bottom: 1px solid rgb(240, 240, 240);
+        image{
+            width: 30rpx;
+            margin-right: 20rpx;
+            height: 30rpx;
+        }
+    }
+    .idCardCont{
+        background: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .cardChild{
+          position: relative;
+            margin: 30rpx 0;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            image{
+                height: 50rpx;
+                width: 50rpx;
+            }
+            .name{
+                color: #999;
+                font-size: 26rpx;
+                margin-top: 5rpx;
+            }
+        }
+    }
+}
+
+.alertQcode{
+  transition: .5s;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  position:fixed;
+  background: rgba(0,0,0,.6);
+  width: 0%;
+  height: 0%;
+  overflow: hidden;
+  padding: 20rpx 5%;
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  z-index: 20; 
+  .info_f{
+    text-align: center;
+    padding: 20rpx;
+    box-sizing: border-box;
+    .van-button{
+      background: #F56F68;
+      width: 50%;
+      color: white;
+      border: none;
+    }
+  }
+  .img{
+    flex: 1;
+    
+    display: flex;
+    // align-items: center;
+    // flex-direction: column ;
+    justify-content: center;
+    image{
+      max-width: 100vh;
+      // height: 100%; 
+      // flex: 1;
+      height: 85vh;
+    }
+  }
+  .exit_c{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding:5rpx 30rpx;
+    box-sizing: border-box;
+    background: #F56F68;
+    color: white;
+  }
+}
+.Qcode{
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+// 重置样式
+.form{
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  height: 0;
+
+}
+.btnMrFu{
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  line-height: none;
+  color: none;
+  background: #fff;
+  width: 100%;
+}
+.btnMrFu::after{
+  border: none;
+}
+.btnMrFu::before{
+  display: none;
+}
+
+.chooseZX{
+  padding: 30rpx;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #999;
+  border-top: 1px solid rgb(241, 241, 241);
+}
+
+
+// dib导航
+.navBarFu{
+  position: fixed;
+  bottom: 0;left: 0;
+  width: 100%;
+  z-index: 3;
+  background: white;
+  display: flex;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  border-top:1px solid rgb(240, 240, 240);
+  .child{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex: 1;
+      position: relative;
+      opacity: 0.6;
+      image{
+        width: 40rpx;
+        height: 40rpx;
+      }
+      .name{
+          margin-top: 5rpx;
+          // color: #999;
+      }
+      
+  }
+  .black{
+      opacity: 1;
+  }
+  .max{
+      opacity: 1;
+      image{
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        top: -40rpx;
+        width: 100rpx;
+        height: 100rpx;
+      }
+  }
+
+
+  
+}
+// 
+.fri_ml_mh{
+  display: flex;
+  align-items: center;
+  background: #ff7068;
+  color: #fefffd;
+  font-size: 30rpx;
+  padding: 0 40rpx 70rpx ;
+  box-sizing: border-box;
+  .child{
+    text-align: center;
+    flex: 1;
+    .name{
+      margin-bottom: 10rpx;
+    }
+  }
+  .border{
+    width:1px;
+    background: #ffffff;
+    height: 30rpx;
+  }
+}
+
+
+// 
+.bgwr{
+  height: 130rpx ;
+  background: white;
+  position: relative ;
+}
+
+// 
+.yq_pt_cj_qd{
+  position: absolute;
+  left: 0;
+  top: -45rpx;
+  width: 86%;
+  background: white;
+  margin: 0 7%;
+  border-radius: 20rpx;
+  box-shadow: 0 1px 5px rgb(218, 218, 218);
+  display: flex;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #666;
+  .child{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    image{
+      width: 50rpx;
+      height: 50rpx;
+    }
+    .name{
+      margin-top: 15rpx;
+    }
+  }
+}

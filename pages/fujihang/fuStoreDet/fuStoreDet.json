@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "addr-picker": "../../../components/addrpicker/addrPicker"
+  },
+  "navigationBarTitleText":"门店详情",
+  "navigationStyle":"custom"
+}

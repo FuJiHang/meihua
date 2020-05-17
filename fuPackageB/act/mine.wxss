@@ -1,0 +1,103 @@
+.act-container {
+  padding: 30rpx;
+}
+
+.act-container .margin-t-50 {
+  margin-top: 50rpx;
+}
+
+.act-container .margin-b-30 {
+  margin-bottom: 30rpx;
+}
+
+.act-container .act-gray {
+  color: #999999;
+}
+
+.act-container .act-active {
+  color: #f56f68;
+}
+
+.act-container .act-bg-gray {
+  background: #999999 !important;
+}
+
+.act-container .act-bg-active {
+  background: #f56f68 !important;
+}
+
+.act-container .line {
+  width: 100%;
+  height: 0;
+  border-bottom: 1rpx dashed #f56f68;
+}
+
+.act-container .act-warp {
+  position: relative;
+  background-color: #fff;
+  padding: 48rpx 30rpx 73rpx 30rpx;
+}
+
+.act-container .act-warp:after {
+  position: absolute;
+  content: "";
+  width: 60rpx;
+  height: 60rpx;
+  background: #f7f7f7;
+  left: -36rpx;
+  border-radius: 50%;
+  top: 313rpx;
+  z-index: 2;
+}
+
+.act-container .act-warp:before {
+  position: absolute;
+  content: "";
+  width: 60rpx;
+  height: 60rpx;
+  background: #f7f7f7;
+  right: -36rpx;
+  border-radius: 50%;
+  top: 313rpx;
+  z-index: 2;
+}
+
+.act-container .act-warp .item-top .title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #f56f68;
+  margin-bottom: 19rpx;
+}
+
+.act-container .act-warp .item-top .title-2 {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 49rpx;
+}
+
+.act-container .act-warp .content {
+  font-size: 28rpx;
+  width: 100%;
+}
+
+.act-container .act-warp .content .item {
+  width: 100%;
+}
+
+.act-container .act-warp .content .item .a-left {
+  width: 140rpx;
+}
+
+.act-container .act-warp .content .item .a-use {
+  margin-left: 26rpx;
+  width: 91rpx;
+  height: 40rpx;
+  background: #f56f68;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: white;
+}

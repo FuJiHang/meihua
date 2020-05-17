@@ -1,0 +1,53 @@
+/* pages/selectTechnician/selectTechnician.wxss */
+@import '/template/template.wxss';
+page {
+  position: relative;
+  font-size: 32rpx;
+  color: #333;
+  background: #f7f7f7;
+  padding-bottom: 98rpx;
+}
+
+/* 列表 */
+.all_project_item {
+  padding-left: 30rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.project_list_item {
+  margin-left: 26rpx;
+  padding: 20rpx 30rpx 20rpx 0;
+}
+/* end列表 */
+
+
+/* 底部 */
+.under_btn_box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 98rpx;
+  background: #fff;
+}
+.under_item{
+  text-align: center;
+}
+view.under_item{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color:#ff3c5c;
+}
+button.under_item{
+  flex: 1;
+  color: #fff;
+  background: #F56F68;
+  border-radius: 0;
+}

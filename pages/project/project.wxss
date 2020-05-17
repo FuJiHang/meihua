@@ -1,0 +1,117 @@
+/* pages/project/project.wxss */
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1553648482645'); /* IE9 */
+  src: url('iconfont.eot?t=1553648482645#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPwAAsAAAAAB/wAAAOhAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDWIMlATYCJAMMCwgABCAFhG0HQhv3Bsi+QAZy6+UgkiBHj/WwRw56u2xe/bYAlctPRyL4WvvsNzN/D8EhyXhAVlFREQYkALhUJFtAIa8iFAt/+5Pe18sya89Ch2hFTrL58WSOKkq6vVpCy/Kq+/lr/sDLVVgUcKTYbFrAb9Qi00q6oK3pUnDNSyFM6wYIYKoLG3CJJxr4IGfVg0Nx6WdMG3D+RXweXI6/4QHOsyyREOeY/BiGcUABjbVpCxdIBrE16C5fE4O0nkCrYSsw65o7B4FVkG6BOKMqc8BmNEpDfmgWqoqxJeKGhuZ0Md0BXNefj/8gxZI0MtJ31+mmRaj9Jf5qUqjBMalzYToToklkLAKFOFFpOcTbRhZ5awUSn+b0ShHSVP5/jeZAWbXRP14iKiS3Hcy60cQvnEbwq6iE659EhVbchx8evj+tqPrEYPJLGQoyG16+HITiq3f5c0kHP4wsbObXY8bbQev98Brbb0bMV0NQu/lycGQ2nd5kLlmjey31+YuS989Snjyd6UsgD9S2EmeYjiTlaPhNA6WBjRh5/9DugW/kxQAzyovziaVmjI/vk6KBp166B4f3jOOBZz4EvQ9+TEScvoRSjNKtD+ntoXcn+Br9x3Ca/ffi62DBI0UPCd77qubcUfq5MN8stlyJSCOvB0jn/b5LKFMybfHBum9/YQppQvTXENKY2qIa36//C1v+6tc9dBnqLCotLMni7mNAwlBcyKva59x26NvUxn7Ytj7nhpem9s7GkEpF3aahu07hQPYTv7Y5gJUPrh4/hN9held7Q2xEfFsKegT1veBVyb8RnAKo5bo3UF9IPvUvv+Psi9b4TFjm1xxUwM9/zmtVrVvsPJrv1Br8OUnJsmSZQCK5gEtT16jsmL8TSmilDmrX0evzcNlA5xChOcONIGkyBFmzSaTgF6GhzQqoNFsJrRa0TG7Th/AWpQXzdjkQup2FpNNHyLo9Qgr+EzQM+gWV7ryh1YFwzdlmOjWwTPAcxYtofh1SFyxTZnoaaPL7sbJKnyNpviYOY+KqfiRyQj7egk1MphjgrlYkSmUkE8tAzc5mWNctZBPLgxcot0SpXc7zctWVuAXLgEBrEdgcCluEzFsHUS2wmGRZmQosvL8fplhFN4c0oAL6YRjhUmtHRByhA9IiMTuhbuUS12oKCUXJEBlhMSDNjgnTacSC2NWtPLAFFGdpQMhWjvdKyV0l3PIy4/1WQSvSNEeKHEXvGmZOfviMYrszumriGcnbcBUAAAAA') format('woff2'),
+  url('iconfont.woff?t=1553648482645') format('woff'),
+  url('iconfont.ttf?t=1553648482645') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1553648482645#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-LC_icon_gps_line_2:before {
+  content: "\e631";
+  color: #61B6FD;
+}
+
+.icon-msg:before {
+  content: "\e66d";
+}
+
+
+
+/* ?? */
+.parject-box{
+  background: #FFFFFF;
+}
+.color-style{
+  color: #FFFFFF;
+}
+.project-content {
+  width: 100%;
+  height: 170rpx;
+  /* background: yellow; */
+  position: relative;
+  margin-left: 30rpx;
+   border-bottom: 3rpx solid #E5E5E5;
+  display: flex;
+}
+
+.project-left {
+  /* flex-grow: 2; */
+  width: 15%;
+  position: relative;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+}
+
+.content-img {
+  width:100rpx;
+  height:100rpx;
+  background: greenyellow;
+ 
+  /* position: absolute; */
+  /* top: 0; */
+  /* bottom: 0; */
+
+}
+
+.project-right {
+  /* flex-grow: 1; */
+  width: 600rpx;
+  letter-spacing: 4rpx;
+  /* width: 100%; */
+  /* background: rgb(212, 153, 153); */
+  position: relative;
+}
+
+.business-tip{
+  display: flex;
+  font-size: 20rpx;
+  
+}
+.right-one{
+  margin-top: 30rpx;
+  display: flex;
+  font-size: 23rpx;
+  height: 37rpx;
+  justify-content: space-between;
+}
+.appointment{
+  width: 110rpx;
+  border-radius: 6rpx;
+  height: 50rpx;
+  background:  #F56F68;
+  text-align: center;
+  line-height: 50rpx;
+  position: absolute;
+  right: 33rpx;
+}
+.the-main{
+background:#F56F68;
+height:37rpx;
+width:60rpx;
+/* font-size: 16rpx; */
+border-radius:6rpx;
+line-height:37rpx;
+text-align:center;
+}
+.business{
+  margin-left: 8rpx;
+  line-height: 37rpx;
+
+}
+.hosipito-address{
+   height:37rpx;
+   line-height: 37rpx;
+   font-size: 20rpx;
+}

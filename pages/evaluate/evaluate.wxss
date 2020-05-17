@@ -1,0 +1,85 @@
+/* pages/evaluate/evaluate.wxss */
+page {
+  background-color: #f7f7ff;
+}
+.comment-head {
+  width: 750rpx;
+  background-color: #fff;
+  padding: 30rpx;
+}
+.comment-title {
+  color: #000000;
+  font-family: 'PingFang-SC-Bold';
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.comment-title-cont {
+  font-size: 26rpx;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.comment-title-cont view {
+  margin-right: 17rpx;
+  border-radius:10rpx;
+  background-color: #f8f8f8;
+  width: 160rpx;
+  height: 58rpx;
+  columns: #999999; 
+  text-align: center;
+  line-height: 58rpx;
+}
+.comment-title-cont view:last-child {
+  margin-top: 17rpx;
+}
+.comment-item {
+  margin-top: 20rpx;
+}
+.comment-box {
+  padding: 30rpx;
+  width: 750rpx;
+  background-color: #fff;
+}
+.comment-box-cont {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #999999;
+  font-size: 24rpx;  
+}
+.comment-box-cont .comment-box-date {
+ /*  position: absolute;
+  top: 0rpx;
+  right: 56rpx; */
+  text-align: left;
+}
+.comment-cont .comment-cont-text {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 18rpx;
+}
+.comment-cont .touxiang image {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 10rpx;
+  background-color: aqua;
+  margin: 25rpx 0px;
+}
+.items {
+  display: flex;
+  align-items: center;
+}
+.items .items-title {
+  color: #999999;
+  font-size: 22rpx;
+  margin-right: 28rpx;
+}
+.items image {
+  width: 26rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}

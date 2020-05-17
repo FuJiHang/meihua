@@ -1,0 +1,149 @@
+/* pages/informationToApplyForTechnician/informationToApplyForTechnician.wxss */
+#informationToApplyForTechnician{
+  width: 100%;
+  background: #FFFFFF;
+}
+.ITAFT-top-box{
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+}
+.ITAFT-top-center-box{
+  width: 690rpx;
+  height: 148rpx;
+  background: #FFCD62;
+  border-radius: 4rpx;
+  display: flex;
+  box-shadow: 0 16rpx 20rpx rgb(241, 224, 187);
+}
+.ITAFT-top-left{
+  width: 78rpx;
+  height: 78rpx;
+  /* background: red; */
+  margin-left: 34rpx;
+  margin-top: 35rpx;
+  
+}
+.ITAFT-top-left image{
+  width: 78rpx;
+  height: 78rpx;
+}
+.ITAFT-top-center{
+  margin-top: 45rpx;
+  width: 203rpx;
+  height: 58rpx;
+  /* background: blue; */
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: #FFFFFF;
+
+}
+.ITAFT-top-title{
+  font-size: 24rpx;
+}
+.ITAFT-top-describe{
+  font-size: 20rpx;
+}
+
+.ITAFT-top-right{
+  margin-top: 63rpx;
+  margin-left: 270rpx;
+  width: 90rpx;
+  height: 23rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  /* background: red; */
+
+}
+.ITAFT-center-box{
+  width: 100%;
+  position: relative;
+  border-top: 20rpx solid #F7F7F7;
+}
+.ITAFT-center-title{
+  width: 100%;
+  font-size: 28rpx;
+  color: #666666;
+  margin-left: 30rpx;
+  height: 89rpx;
+  /* background: yellow; */
+  line-height: 89rpx;
+}
+.ITAFT-center-content{
+  /* width: 80%;
+   */
+   width: 674rpx;
+  margin-left: 30rpx;
+  height: 181rpx;
+  font-size: 26rpx;
+  color: #999999;
+  /* background: red; */
+}
+.ITAFT-center-bottom{
+  width: 100%;
+  height: 50rpx;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+/* ITAFT-bottom-box */
+.ITAFT-bottom-box{
+  width: 100%;
+  /* height: 260rpx; */
+  border-bottom: 1px solid #E5E5E5;
+
+}
+.ITFAT-bottom-title{
+  width: 100%;
+  height: 89rpx;
+  line-height: 89rpx;
+  font-size: 26rpx;
+  color: #666666;
+  margin-left: 30rpx;
+}
+.ITFAT-bottom-img-box{
+  width: 93%;
+  margin-left: 30rpx;
+  height:128rpx; 
+  display: flex;
+  /* justify-content: space-between; */
+
+}
+.ITFAT-bottom-img-box2{
+  width: 128rpx;
+  height: 128rpx;
+  margin-left: 15rpx;
+  background: red;
+}
+.ITFAT-bottom-img-add-btn{
+  width: 128rpx;
+  margin-left: 15rpx;
+  height: 128rpx;
+}
+.ITFAT-bottom-img-add-btn image{
+  width: 128rpx;
+  height: 128rpx;
+}
+.ITFAT-bottom-img{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 1px solid (229, 229, 229, 0.6);
+}
+.ITFAT-bottom-bottom{
+  width: 100%;
+  height: 32rpx;
+}
+.ITFAT-bottom-submit{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 98rpx;
+  background: #F56F68;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  line-height: 98rpx;
+  text-align: center;
+
+}

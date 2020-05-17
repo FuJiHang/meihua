@@ -1,0 +1,124 @@
+<!--pages/myLiving/myLiving.wxml-->
+<!-- 顶部 -->
+<view class='topContent disflex' style='justify-content: space-around;'>
+  <view class='broadcasrNum'>
+    <image class="uselogo" src="{{userInfo.picture}}"></image>
+  </view>
+  <view class='broadcasrNum'>
+    <text>{{userInfo.ZhiBoTotalCount}}</text>
+    <view class='span'>直播</view>
+  </view>
+  <view class='broadcasrNum'>
+    <text>{{userInfo.LuBoTotalCount}}</text>
+    <view class='span'>录播</view>
+  </view>
+  <view class='broadcasrNum'>
+    <text>{{userInfo.AttentionCount}}</text>
+    <view class='span'>关注</view>
+  </view>
+</view>
+<view style='background-color:#F5F5F5;width:100%;height:20rpx'></view>
+<!-- tab切换 -->
+<view class="nav" bindtap="selected" style="{{navFlex?'position: fixed;top: 0;':''}}">
+  <view class="{{status == 0?'red':'default'}}" data-status="0">直播</view>
+  <view class="{{status == 1?'red':'default'}}" data-status="1">录播</view>
+  <view class="{{status == 2?'red':'default'}}" data-status="2">关注</view>
+</view>
+<!-- 直播列表 -->
+<view class='livingList' hidden="{{status != 0}}">
+  <view class='startLiving' bindtap='toCreateLiving'>我要直播</view>
+  <!-- 列表 -->
+  <view class='listContent' wx:if="{{liveInfo.length > 0}}">
+    <radio-group class="radio-group" bindchange="bindRadioAddressChange">
+      <view class='listItem' wx:for="{{liveInfo}}" wx:key="{{item.Id}}">
+        <!-- 内容 -->
+        <view class='disflex' style='border-bottom:2rpx solid #e5e5e5;padding:15rpx 0;' data-index='{{index}}' bindtap='startPush'>
+          <view class='livingLeft'>
+            <image class='image' src="{{item.Image}}"></image>
+            <view class='livingStatus' wx:if="{{item.IsDefault === 1}}">
+              <view class='redDot'></view>
+              <view class='livingStatusText'>直播中</view>
+            </view>
+          </view>
+          <view class='livingRight'>
+            <view class='titleName'>{{item.RoomName}}</view>
+            <view class='nickName'>{{item.UserName}}</view>
+            <view class='startTime'>开播时间:{{item.AdvanceTime}}</view>
+            <view class='goodsList disflex' style='justify-content:flex-start' wx:if="{{item.ProductList.TotalRecords > 0}}">
+              <image wx:for="{{item.ProductList.Data}}" wx:key="{{item.ProductId}}" class='goodsItem' src="{{item.ImageUrl1}}"></image>
+              <view class='goodsMore' wx:if="{{item.ProductList.TotalRecords > 3}}">
+                <view style='display: table-cell; vertical-align:middle; text-align:center;'>
+                  <view style='color:#E95278;font-weight: bold'>+{{item.ProductList.TotalRecords}}</view>
+                  <view style='color:#CCCCCC;font-weight: bold'>More</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 操作面板 -->
+        <view class='operation'>
+          <view class="addressmor">
+            <!-- 是否设为默认 -->
+            <radio checked="{{item.IsDefault === 1}}" color="#ff5722" data-index="{{index}}" size="10" value="{{item.Id}}"></radio>
+            <text class="{{item.IsDefault === 1?'active':''}}">{{item.IsDefault === 1?'默认房间':'设为默认'}}</text>
+          </view>
+          <!-- 删除 -->
+          <view class="addressmorr" data-index="{{index}}">
+            <image catchtap="onEdit" style='margin-right:50rpx;' data-index="{{index}}" src='../../images/redact.png'></image>
+            <image catchtap="onDelete" data-id="{{item.Id}}" src='../../images/delete.png'></image>
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <view class='defaultStyle' wx:else>
+    暂无信息
+  </view>
+</view>
+<!-- 录播列表 -->
+<view class='livingList' hidden="{{status != 1}}">
+  <view class='listContent' wx:if="{{recordInfo.length > 0}}">
+    <view class='listItem disflex' wx:for="{{recordInfo}}" wx:key="{{item.Id}}" data-id='{{item.Id}}' bindtap='toRecord'>
+      <view class='livingLeft'>
+        <image class='image' src="{{item.Image}}"></image>
+        <view class='livingStatus' wx:if="{{false}}">
+          <view class='redDot'></view>
+          <view class='livingStatusText'>轮播中</view>
+        </view>
+      </view>
+      <view class='livingRight'>
+        <image class='recDeleteImg' catchtap="onDelete" data-type='rec' data-id="{{item.Id}}" src='../../images/delete.png'></image>
+        <view class='titleName'>{{item.RoomName}}</view>
+        <view class='nickName'>{{item.UserName}}</view>
+        <view class='startTime'>首播时间:{{item.AdvanceTime}}</view>
+        <view class='goodsList disflex' style='justify-content:flex-start' wx:if="{{item.ProductList.TotalRecords > 0}}">
+          <image wx:for="{{item.ProductList.Data}}" class='goodsItem' src="{{item.ImageUrl1}}"></image>
+          <view class='goodsMore' wx:if="{{item.ProductList.TotalRecords > 3}}">
+            <view style='display: table-cell; vertical-align:middle; text-align:center;'>
+              <view style='color:#E95278;font-weight: bold'>+{{item.ProductList.TotalRecords}}</view>
+              <view style='color:#CCCCCC;font-weight: bold'>More</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='defaultStyle' wx:else>
+    暂无信息
+  </view>
+</view>
+<!-- 关注列表 -->
+<view class='livingList' hidden="{{status != 2}}">
+  <view class='listContent' wx:if="{{attentionList.length > 0}}">
+    <view class='attentionItem disflex' wx:for="{{attentionList}}" wx:key="{{item.LiveUserId}}">
+      <view class='disflex' style='justify-content: flex-start;' data-id='{{item.LiveUserId}}' data-img='{{item.Picture}}' data-name='{{item.UserName}}' bindtap='toOtherHomePage'>
+        <image class='headImg' src='{{item.Picture}}'></image>
+        <view style='margin-left: 15rpx'>{{item.UserName}}</view>
+      </view>
+      <view class='attentionBtn' data-id='{{item.LiveUserId}}' bindtap='unfollow'>已关注</view>
+    </view>
+  </view>
+  <view class='defaultStyle' wx:else>
+    暂无信息
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!-- 门店订单 -->
+<view class="goods-list flex" hover-class="none" hover-stop-propagation="false">
+  <view class="goods-item" wx:for="{{giftList}}" bindtap="checkBox" data-index="{{index}}">
+    <image class="checkbox" src="{{imgUrl+'checked@2x.png'}}" wx:if="{{item.checked}}"></image>
+    <image class="checkbox" src="{{imgUrl+'uncheck.png'}}" wx:else></image>
+    <view class="goods-show flex-content-center">
+      <view class="goods-cover" style="background: url({{item.ImageUrl}})center center / cover no-repeat"></view>
+    </view>
+    <view class="goods-detail">
+      <view class="title">{{item.Name}}</view>
+      <view class="desc">{{item.ShortDescription}}</view>
+      <view class="priceFu">￥{{item.CostPrice}}</view>
+    </view>
+  </view>
+  <view class="cu-load  {{isLoading?'loading':'over'}}"></view>
+</view>
+<view class="handler flex-center">
+  <view class="submit flex-content-center" bindtap="submit">提交</view>
+</view>
+<!-- show -->
+<van-popup show="{{show}}" bindtap="onCloseP" position="bottom" bind:close="onCloseP">
+  <view class="iosJJ">
+  
+    <view class="logo">
+      <image src="{{imgUrl+'logo413.png'}}" mode="widthFix" />
+    </view>
+    <view class="bg">
+        <image class="closeB" bindtap="onCloseP" src="{{imgUrl+'closeB.png'}}" mode="widthFix" />
+      <view class="title">个人信息填写</view>
+      <view class="child" wx:for="{{personData}}" wx:key="{{index}}">
+        {{item.name}}
+        <input value="{{item.val}}" catchtap placeholder="{{item.plr}}" bindinput="changeInput" data-name="{{'personData['+index+'].val'}}" />
+      </view>
+      <view class="btn">
+        <van-button style="width:100%;" size="small" bindtap="payOrder">提交</van-button>
+      </view>
+    </view>
+  </view>
+</van-popup>
+<!-- <image class="checked" src="/images/checked@2x.png"></image>
+  <view class="flex-col-1 sel">全选</view> -->

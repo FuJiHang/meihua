@@ -1,0 +1,40 @@
+<!--pages/myorder/myorder.wxml-->
+<import src="../common/templeates.wxml"></import>
+<!-- 导入模板 -->
+<view class='my-order-box'>
+  <view class='bottom-box'>
+    <view class='order-bottom-box'>
+      <view class='order-bottom addcolor'>
+        已预约
+      </view>
+      <view class='order-bottom'>
+        已核销
+      </view>
+      <view class='order-bottom'>
+        已完成
+      </view>
+      <view class='order-bottom'>
+        已取消
+      </view>
+    </view>
+<!-- 小横条 -->
+    <view class='order-bottom-style'>
+      <view class='bottom-list-box'>
+        <view class='bottom-list add-list-color'></view>
+      </view>
+      <view class='bottom-list-box'>
+        <view class='bottom-list'></view>
+      </view>
+      <view class='bottom-list-box'>
+        <view class='bottom-list'></view>
+      </view>
+      <view class='bottom-list-box'>
+        <view class='bottom-list'></view>
+      </view>
+    </view>
+
+  </view>
+<!-- 'my-order-box -->
+<template is = "temp_177" ></template>
+
+</view>

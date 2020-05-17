@@ -1,0 +1,431 @@
+page {
+  position: relative;
+  font-size: 26rpx;
+  color: #666;
+  box-sizing: border-box;
+}
+page .picker-view-box {
+  margin-top: -50% !important;
+}
+#fuIndexG .seachMTAM {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+}
+#fuIndexG .seachMTAM .addressImg {
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+#fuIndexG .seachMTAM .addressImg > span {
+  margin-right: 10rpx;
+}
+#fuIndexG .seachMTAM .addressImg .van-icon {
+  margin-top: 5rpx;
+}
+#fuIndexG .seachMTAM .seachbg {
+  margin-right: 10rpx;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  background: #EEEEEE;
+  border-radius: 40rpx;
+}
+#fuIndexG .seachMTAM .seachbg image {
+  margin-left: 20rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+#fuIndexG .seachMTAM .seachbg input {
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  flex: 1;
+  height: 60rpx;
+}
+#fuIndexG .item-img {
+  width: 100%;
+}
+#fuIndexG .newS {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: white;
+  height: 170rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+#fuIndexG .newS .leftNew {
+  font-size: 40rpx;
+  font-weight: 900;
+  color: #222;
+}
+#fuIndexG .newS .leftNew .red {
+  color: #F56F68;
+}
+#fuIndexG .newS .border {
+  width: 1px;
+  margin: 0 20rpx;
+  height: 60rpx;
+  background: #f0f0f0;
+}
+#fuIndexG .newS .rightNew {
+  flex: 1;
+  height: 100%;
+}
+#fuIndexG .newS .rightNew swiper {
+  height: 100%;
+}
+#fuIndexG .newS .rightNew .child {
+  box-sizing: border-box;
+  padding-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+#fuIndexG .newS .rightNew .child .tip {
+  padding: 5rpx;
+  box-sizing: border-box;
+  color: #F56F68;
+  border: 1px solid #F56F68;
+  border-radius: 8rpx;
+}
+#fuIndexG .newS .rightNew .child .txt {
+  flex: 1;
+  color: #999;
+  margin-left: 20rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuIndexG .newS .rightNew :first-child {
+  padding-top: 0;
+}
+#fuIndexG .conpou {
+  box-sizing: border-box;
+  margin: 20rpx 0;
+  background: white;
+}
+#fuIndexG .conpou .cou {
+  width: 100%;
+}
+#fuIndexG .moreFun {
+  background: white;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+#fuIndexG .moreFun .topFun {
+  display: flex;
+}
+#fuIndexG .moreFun .topFun .flex {
+  box-sizing: border-box;
+  flex: 1;
+}
+#fuIndexG .moreFun .topFun .flex image {
+  width: 100%;
+}
+#fuIndexG .moreFun .btnFun {
+  display: flex;
+}
+#fuIndexG .moreFun .btnFun .flex {
+  box-sizing: border-box;
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  height: 287rpx;
+}
+#fuIndexG .moreFun .btnFun .flex image {
+  width: 100%;
+}
+#fuIndexG .moreFun .btnFun .wid {
+  border-left: 1px solid #ebebeb;
+}
+#fuIndexG .moreKan .noMore {
+  float: left;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 120rpx;
+  color: #999;
+}
+#fuIndexG .moreKan .topName {
+  background: white;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+#fuIndexG .moreKan .topName .name {
+  flex: 1;
+  font-size: 32rpx;
+}
+#fuIndexG .moreKan .topName .van-icon {
+  margin-top: 2rpx;
+}
+#fuIndexG .moreKan .contantKan {
+  padding: 0 8rpx;
+  box-sizing: border-box;
+}
+#fuIndexG .moreKan .contantKan .rightK {
+  float: right;
+}
+#fuIndexG .moreKan .contantKan .leftK {
+  float: left;
+}
+#fuIndexG .moreKan .contantKan .leftK,
+#fuIndexG .moreKan .contantKan .rightK {
+  width: 50%;
+  padding: 0 0 10rpx;
+  box-sizing: border-box;
+}
+#fuIndexG .moreKan .contantKan .leftK .child,
+#fuIndexG .moreKan .contantKan .rightK .child {
+  margin: 0 8rpx 20rpx;
+  background: white;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .logoImg,
+#fuIndexG .moreKan .contantKan .rightK .child .logoImg {
+  position: relative;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .logoImg .playBtn,
+#fuIndexG .moreKan .contantKan .rightK .child .logoImg .playBtn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  opacity: 0.8;
+  padding: 10rpx;
+  background: rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .logoImg image,
+#fuIndexG .moreKan .contantKan .rightK .child .logoImg image,
+#fuIndexG .moreKan .contantKan .leftK .child .logoImg .myVideo,
+#fuIndexG .moreKan .contantKan .rightK .child .logoImg .myVideo {
+  max-height: 800rpx;
+  width: 100%;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .name,
+#fuIndexG .moreKan .contantKan .rightK .child .name {
+  margin: 15rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  font-size: 28rpx;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .btnXX,
+#fuIndexG .moreKan .contantKan .rightK .child .btnXX {
+  padding: 0 20rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .btnXX .touxiang,
+#fuIndexG .moreKan .contantKan .rightK .child .btnXX .touxiang {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .btnXX .touxiang image,
+#fuIndexG .moreKan .contantKan .rightK .child .btnXX .touxiang image {
+  width: 100%;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .btnXX .nameC,
+#fuIndexG .moreKan .contantKan .rightK .child .btnXX .nameC {
+  flex: 1;
+  margin: 0 5rpx;
+}
+#fuIndexG .moreKan .contantKan .leftK .child .btnXX .van-icon,
+#fuIndexG .moreKan .contantKan .rightK .child .btnXX .van-icon {
+  margin: 8rpx 5rpx 0 0;
+}
+#fuIndexG .address-box {
+  position: fixed;
+  z-index: 80;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+#fuIndexG .address-box2 {
+  position: absolute;
+  padding: 8px 18px;
+  box-sizing: border-box;
+  top: 30rpx;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border: 1px solid #efefef;
+  width: 28%;
+  text-align: center;
+  color: #333;
+  border-radius: 4rpx;
+  background: #fff;
+  z-index: 222;
+}
+#fuIndexG #addr-picker {
+  width: 100% !important;
+}
+#fuIndexG .konbai {
+  height: 120rpx;
+}
+.noStore {
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+.noStore image {
+  width: 30%;
+  margin-bottom: 20rpx;
+}
+.noStore .name {
+  font-size: 32rpx;
+  color: #999;
+}
+.funtionNew {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  height: 330rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.funtionNew .bigs {
+  width: 50%;
+  padding: 5rpx;
+  box-sizing: border-box;
+}
+.funtionNew .contant {
+  height: 303rpx;
+  padding: 5rpx;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.funtionNew image {
+  height: 1rpx;
+  width: 100%;
+}
+.navBarFu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background: white;
+  display: flex;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  border-top: 1px solid #f1f1f1;
+}
+.navBarFu .child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  opacity: 0.6;
+}
+.navBarFu .child image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.navBarFu .child .name {
+  margin-top: 5rpx;
+}
+.navBarFu .black {
+  opacity: 1;
+}
+.navBarFu .max {
+  opacity: 1;
+}
+.navBarFu .max image {
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  top: -40rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.van-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.van-popup image {
+  width: 100%;
+}
+.van-popup .img {
+  width: 100%;
+  position: relative;
+}
+.van-popup .img .name,
+.van-popup .img .phone,
+.van-popup .img .code,
+.van-popup .img .getCode,
+.van-popup .img .register {
+  position: absolute;
+  width: 51.5%;
+  height: 75rpx;
+}
+.van-popup .img .name {
+  left: 28%;
+  top: 47%;
+}
+.van-popup .img .phone {
+  left: 28%;
+  top: 58.5%;
+}
+.van-popup .img .code {
+  left: 28%;
+  top: 70%;
+  width: 23%;
+}
+.van-popup .img .getCode {
+  left: 54.5%;
+  top: 70%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fd5c48;
+}
+.van-popup .img .register {
+  left: 24%;
+  top: 84%;
+  width: 47%;
+}
+/*# sourceMappingURL=./fuIndexG.css.map */

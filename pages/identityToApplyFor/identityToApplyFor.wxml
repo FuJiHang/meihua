@@ -1,0 +1,23 @@
+<!--pages/identityToApplyFor/identityToApplyFor.wxml-->
+<!-- <text>pages/identityToApplyFor/identityToApplyFor.wxml</text> -->
+<view id='identityToApplyFor'>
+  <view class='ITAF-box-tip'>请选择需要的身份角色</view>
+
+  <view class='ITAF-box-shop' wx:for="{{identityToApplyFor}}">
+    <view class='{{item.nowclas}}'>
+      <view class='ITAF-box-shop-box2'>
+        <view class='ITAF-box2-shop-left'>
+           <image src='{{item.imgurl}}'></image>
+        </view>
+        <view class='ITAF-box2-shop-center'>
+          <view class='ITAF-box2-title'> {{item.title}}</view>
+          <view class='ITAF-box2-describe'> {{item.tip}}</view>
+        </view>
+        <view class='ITAF-box2-shop-right'>
+        <!-- 这差一个图标 -->
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

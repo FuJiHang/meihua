@@ -1,0 +1,477 @@
+page {
+  height: 100%;
+  overflow: hidden;
+}
+view {
+  -webkit-overflow-scrolling: touch;
+}
+#fuBeaStore {
+  font-size: 26rpx;
+  color: #666;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+#fuBeaStore swiper-item image {
+  width: 100%;
+}
+#fuBeaStore .newNews {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  font-size: 29rpx;
+  background: white;
+  box-sizing: border-box;
+  padding: 20rpx;
+  align-items: center;
+}
+#fuBeaStore .newNews .name {
+  color: #2b2b2b;
+}
+#fuBeaStore .newNews .van-icon-volume-o {
+  margin: 10rpx 20rpx;
+}
+#fuBeaStore .newNews .new {
+  flex: 1;
+}
+#fuBeaStore .newNews .new .van-notice-bar {
+  font-size: 26rpx;
+  height: 20px;
+  padding: 0;
+}
+#fuBeaStore .navBar {
+  padding: 20rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  background: white;
+  color: #090909;
+  display: flex;
+  align-items: center;
+}
+#fuBeaStore .navBar .name {
+  color: #070707;
+  flex: 1;
+  font-weight: 800;
+}
+#fuBeaStore .navBar .val {
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+#fuBeaStore .navBar image {
+  width: 30rpx;
+  height: 30rpx;
+}
+#fuBeaStore .typefun {
+  margin-bottom: 20rpx;
+}
+#fuBeaStore .typefun image {
+  width: 100%;
+}
+#fuBeaStore .hotProduct {
+  display: flex;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  margin-bottom: 20rpx;
+}
+#fuBeaStore .hotProduct .leftHP {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-right: 1px solid #f0f0f0;
+  width: 40%;
+}
+#fuBeaStore .hotProduct .leftHP .name {
+  margin: 25rpx 0;
+  font-size: 32rpx;
+  text-align: center;
+  color: #444444;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuBeaStore .hotProduct .leftHP .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#fuBeaStore .hotProduct .leftHP .img image {
+  background: #ffe7e6;
+  height: 150rpx;
+  max-width: 100%;
+}
+#fuBeaStore .hotProduct .leftHP .val {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #242424;
+  padding: 25rpx 0;
+}
+#fuBeaStore .hotProduct .leftHP .val image {
+  height: 30rpx;
+  width: 30rpx;
+}
+#fuBeaStore .hotProduct .leftHP .val .num {
+  margin: 0 10rpx;
+  font-size: 28rpx;
+}
+#fuBeaStore .hotProduct .rightHP {
+  flex: 1;
+}
+#fuBeaStore .hotProduct .rightHP .border {
+  border-bottom: 1px solid #f0f0f0;
+}
+#fuBeaStore .hotProduct .rightHP .childPro {
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant {
+  flex: 1;
+  margin-right: 20rpx;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant .val {
+  display: flex;
+  align-items: center;
+  color: #242424;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant .val .ovFU {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant .val image {
+  height: 30rpx;
+  width: 30rpx;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant .val .num {
+  margin: 0 10rpx;
+  font-size: 28rpx;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant .name {
+  font-size: 32rpx;
+  margin: 20rpx 0 5rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .contant .det {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin-bottom: 15rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+#fuBeaStore .hotProduct .rightHP .childPro .productImg {
+  background: #ffe7e6;
+  height: 150rpx;
+  width: 150rpx;
+}
+#fuBeaStore .productCont {
+  padding: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  margin-bottom: 20rpx;
+}
+#fuBeaStore .productCont .product {
+  padding: 10rpx 10rpx 0;
+  margin-bottom: 20rpx;
+  width: 50%;
+  box-sizing: border-box;
+}
+#fuBeaStore .productCont .product .jiaoZiPi {
+  border: 1px solid #f1f1f1;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#fuBeaStore .productCont .product .jiaoZiPi .detG {
+  padding: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+#fuBeaStore .productCont .product .jiaoZiPi .detG .flex {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: #2a2a2a;
+  font-size: 30rpx;
+}
+#fuBeaStore .productCont .product .jiaoZiPi .detG .flex image {
+  margin-right: 10rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+#fuBeaStore .productCont .product .jiaoZiPi .detG .collectG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #c9c9c9;
+  font-size: 24rpx;
+  filter: grayscale(100%);
+}
+#fuBeaStore .productCont .product .jiaoZiPi .detG .coll {
+  filter: grayscale(0);
+}
+#fuBeaStore .productCont .product .jiaoZiPi .btnG {
+  border-top: 1px solid #f0f0f0;
+}
+#fuBeaStore .productCont .product .jiaoZiPi .btnG .van-button {
+  border: none;
+  width: 100%;
+  color: #373737;
+}
+#fuBeaStore .productCont .product .img {
+  box-sizing: border-box;
+  border-bottom: 1px solid #f0f0f0;
+}
+#fuBeaStore .productCont .product .img image {
+  background: #ffe7e6;
+  height: 220rpx;
+  max-width: 100%;
+}
+#fuBeaStore .productCont .product .name {
+  font-size: 32rpx;
+  margin: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuBeaStore .productCont .product .det {
+  color: #999;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuBeaStore .productCont .product .val {
+  display: flex;
+  align-items: center;
+  color: #F56F68;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+#fuBeaStore .productCont .product .val image {
+  height: 30rpx;
+  width: 30rpx;
+}
+#fuBeaStore .productCont .product .val .ovFU {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+#fuBeaStore .productCont .product .val .bea {
+  font-size: 22rpx;
+  overflow: hidden;
+}
+#fuBeaStore .productCont .product .val .bea .num {
+  margin: 0 10rpx;
+  font-size: 30rpx;
+}
+#fuBeaStore .productCont .product .val .xjin {
+  font-size: 22rpx;
+}
+#fuBeaStore .productCont .product .val .xjin .num {
+  margin: 0 5rpx;
+  font-size: 30rpx;
+}
+#fuBeaStore .productCont .product .chaozuo {
+  margin-top: 10rpx;
+  border-top: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#fuBeaStore .productCont .product .chaozuo .collect {
+  justify-content: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  filter: grayscale(100%);
+  color: #F56F68;
+  font-size: 28rpx;
+}
+#fuBeaStore .productCont .product .chaozuo .collect .van-icon {
+  margin-right: 10rpx;
+}
+#fuBeaStore .productCont .product .chaozuo .coll {
+  filter: grayscale(0);
+}
+#fuBeaStore .productCont .product .chaozuo .btn {
+  overflow: hidden;
+  flex: 1;
+}
+#fuBeaStore .productCont .product .chaozuo .btn .van-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #F56F68;
+  color: white;
+  padding: 0;
+  border-radius: 0;
+}
+#fuBeaStore .productCont .product .chaozuo .btn .van-button .bImg {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+#fuBeaStore .productCont .product .btnFU {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+#fuBeaStore .senoud {
+  margin-bottom: 20rpx;
+  display: flex;
+  padding: 10rpx;
+  box-sizing: border-box;
+  background: white;
+}
+#fuBeaStore .senoud .child {
+  width: 50%;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+#fuBeaStore .senoud .child .name {
+  font-weight: 800;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  font-size: 30rpx;
+  color: #070707;
+  margin: 10rpx 0 20rpx;
+  box-sizing: border-box;
+}
+#fuBeaStore .senoud .child image {
+  height: 150rpx;
+  width: 100%;
+}
+#fuBeaStore .van-popup--right {
+  width: 80%;
+  overflow: auto;
+  height: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+#fuBeaStore .van-popup--right .skuContant .name {
+  font-size: 32rpx;
+  color: #999;
+  padding: 20rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+#fuBeaStore .van-popup--right .skuContant .sku {
+  display: flex;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+#fuBeaStore .van-popup--right .skuContant .sku .child {
+  width: calc(29.73%);
+  text-align: center;
+  border-radius: 6rpx;
+  background: #f0f0f0;
+  margin: 20rpx 20rpx 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#fuBeaStore .van-popup--right .skuContant .sku .child .val {
+  font-size: 30rpx;
+  padding: 10rpx 5rpx 5rpx;
+}
+#fuBeaStore .van-popup--right .skuContant .sku .child .bfb {
+  padding-bottom: 10rpx;
+}
+#fuBeaStore .van-popup--right .skuContant .sku .choose {
+  background: #F56F68;
+  color: white;
+}
+#fuBeaStore .btnPP {
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: right;
+  margin-top: 40rpx;
+}
+#fuBeaStore .btnPP .van-button {
+  background: #F56F68;
+  color: white;
+}
+#fuBeaStore .navBarFu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background: white;
+  display: flex;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  border-top: 1px solid #f0f0f0;
+}
+#fuBeaStore .navBarFu .child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  opacity: 0.6;
+}
+#fuBeaStore .navBarFu .child image {
+  width: 40rpx;
+  height: 40rpx;
+}
+#fuBeaStore .navBarFu .child .name {
+  margin-top: 5rpx;
+}
+#fuBeaStore .navBarFu .black {
+  opacity: 1;
+}
+#fuBeaStore .navBarFu .max {
+  opacity: 1;
+}
+#fuBeaStore .navBarFu .max image {
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  top: -40rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+#fuBeaStore .konbai {
+  height: 120rpx;
+}
+/*# sourceMappingURL=./fuBeaStore.css.map */

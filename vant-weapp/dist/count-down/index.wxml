@@ -1,0 +1,20 @@
+<view class="van-count-down">
+  <slot wx:if="{{ useSlot }}" />
+  <block wx:else>
+    <view class="fuTime">
+      <span class="time">{{day}}</span>
+      天
+      <span class="time">{{shi[0]}}</span>
+      <span class="time">{{shi[1]}}</span>:
+      <span class="time">{{fen[0]}}</span>
+      <span class="time">{{fen[1]}}</span>:
+      <span class="time">{{miao[0]}}</span>
+      <span class="time">{{miao[1]}}</span>
+
+
+    </view>
+    <!-- {{shi[0]}}  {{shi[1]}}
+  {{fen[0]}}  {{fen[1]}}
+  {{miao[0]}}  {{miao[1]}} -->
+  </block>
+</view>

@@ -1,0 +1,50 @@
+/* pages/myorder/myorder.wxss */
+@import "../common/templeates.wxss";
+.my-order-box{
+  background: #FFFFFF;
+}
+.bottom-box{
+  /* height: 90rpx; */
+  width: 100%;
+}
+.order-bottom-box{
+  width: 100%;
+  height: 70rpx;
+  /* background: red; */
+  display: flex;
+}
+.order-bottom{
+  width: 25%;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.order-bottom-style{
+  display: flex;
+  width: 100%;
+
+}
+.bottom-list-box{
+  width: 25%;
+  height: 20rpx;
+  text-align: center;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.bottom-list{
+  width: 50rpx;
+  height: 10rpx;
+  /* background: red; */
+  border-radius: 8rpx;
+  position: absolute;
+  bottom: 0rpx;
+
+}
+/* 添加颜色 */
+.addcolor{
+  color: #F56F68;
+}
+.add-list-color{
+  background:  #F56F68;
+}

@@ -1,0 +1,42 @@
+<!--pages/pointDetail/pointDetail.wxml-->
+<!--轮播-->
+<view class='banner-wrap'>
+  <swiper  autoplay='true' interval='3000' circular='true' bindtap="previewImage" style='height: {{swiperH}}px'>
+    <swiper-item>
+      <image mode='widthFix' style='width:100%' src="{{dataInfo.ImageUrl}}" bindload='onLoadImg' />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 商品详情 -->
+<view class='pointInfo'>
+   <view class='needPoint'>
+     <image src="{{imgUrl+'fujinQian.png'}}" />
+    <span>{{dataInfo.NeedPoint?dataInfo.NeedPoint:0}}</span>
+    美丽金 +
+    <span>{{dataInfo.CostPrice?dataInfo.CostPrice:0}}</span>
+    元
+  </view>
+  <view class='title'>{{dataInfo.Name}}</view>
+  <view class='desc'>{{dataInfo.ShortDescription}}</view>
+  <view class="detfu">
+    <span class="child">
+      <van-icon name="like" size="33rpx" color="#999"/>
+      已有{{dataInfo.CollectionCount}}人收藏
+    </span>
+    <span class="child">
+      <image src="{{imgUrl+'fujinQian.png'}}" />
+      已有{{dataInfo.BuyCount}}人换购
+    </span>
+  </view>
+</view>
+<!-- 商品图片 -->
+<view class='detailImg'>
+  <view class='line'>
+    <span>商品详情</span>
+  </view>
+  <view class='imgArr' wx:for="{{detailImg}}" wx:key="{{index}}">
+    <image mode='widthFix' src="{{item}}" wx:if="{{item}}"></image>
+  </view>
+</view>
+<!-- 按钮 -->
+<view class='submit' bindtap="toPointOrder">立即兑换</view>

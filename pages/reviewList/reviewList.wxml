@@ -1,0 +1,43 @@
+<!--pages/reviewList/reviewList.wxml-->
+<!-- <text>pages/reviewList/reviewList.wxml</text> -->
+<view id='reviewList' >
+  <van-tabs active="{{ active }}"  bind:change="onChange" >
+    <van-tab title="待审核">
+      <!-- 待审核 -->
+      <view class='RL-beforCheck-box'>
+        <view class='RL-beforCheck-top-line'></view>
+        <view class='RL-beforCheck-list-box'>
+          <view class='RL-beforCheck-list-box2'>
+            <view class='RL-beforCheck-list-img'>
+              <image src='/images/pic_head.png'></image>
+            </view>
+            <view class='RL-beforCheck-list-title-box'>
+              <view class='RL-beforCheck-list-title-box2'>
+                <view>李孝利</view> <span>申请成为</span><li>店主</li>
+              </view>
+              <view class='RL-beforCheck-list-tip-box'>
+                <view>省代</view> <span>13355555555</span>
+              </view>
+            </view>
+            <view class='RL-beforCheck-list-right'> } </view>
+          </view>
+        </view>
+
+      </view>
+
+      <!-- 待审核 -->
+    </van-tab>
+    <van-tab title="已审核">
+      <!-- 已审核 -->
+      <view class='RL-Checked-box'></view>
+
+       <!-- 已审核 -->
+    </van-tab>
+    <van-tab title="已拒绝">
+      <!-- 已拒绝 -->
+      <view class='RL-cenceled-box'></view>
+
+      <!-- 已拒绝 -->
+    </van-tab>
+  </van-tabs>
+</view>

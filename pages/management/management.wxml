@@ -1,0 +1,34 @@
+<!-- pages/management/management.wxml -->
+<!-- <text>pages/management/management.wxml</text> -->
+<view class="managementcont">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <view class="search">
+      <input class="text" confirmType="search" placeholder="搜索关键词" placeholderStyle="color:#999999" type="text"></input>
+      <view class="iconfont icon__search iconsearch font40" size="16"></view>
+    </view>
+  </view>
+  <navigator>
+      <text class="search-btn">搜索</text>
+  </navigator>
+  <!-- 管理列表 -->
+  <view class="management-item">
+    <image class="item-img" src=""></image>
+    <view class="item-box">
+      <view class="item-title">
+        芭比没嫁妆
+        <view class="item-edit">编辑</view>
+      </view>
+      <view class="item-content">
+        <view class="cont-icon">主营</view>
+        <view class="content">光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家光疗之家</view>
+      </view>
+      <view class="location-box">
+        <view class="iconfont  location" ></view>
+        <view class="location-addr" >
+          广州市天河区天河北路曙光整形医院
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

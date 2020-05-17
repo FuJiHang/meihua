@@ -1,0 +1,259 @@
+/* pages/technicianDetails/technicianDetails.wxss */
+
+/* pages/ technicianDetails/ technicianDetails.wxss */
+
+page{
+  font-size: 32rpx;
+  color: #333;
+  background: #f7f7f7;
+  position: relative;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+#fujiJISHI{
+  height: 100%;
+  overflow: auto;
+}
+.head_pic_box>image {
+  width: 100%;
+}
+
+.technicianContent {
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+  word-break: break-all;
+  box-sizing: border-box;
+  background: #fff;
+  text-align: center;
+}
+
+.technicianContent .name {
+  color: #666;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.technicianContent .grade {
+  color: #61b6fd;
+  font-size: 32rpx;
+}
+
+.technicianContent .Specialize {
+  text-align: left;
+  color: #666;
+  /* overflow: hidden; */
+  margin-top: 15rpx;
+  /* text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; */
+}
+
+.technicianContent .Specialize text {
+  background: #f56f68;
+  border-radius: 10rpx;
+  color: #fff;
+  margin-right: 20rpx;
+  padding: 2rpx 10rpx;
+}
+
+.technicianContent .desc {
+  color: #999;
+}
+
+.evaluateList {
+  background: #fff;
+}
+
+.evaluateList .evaluateItem {
+  padding: 20rpx;
+  display: flex;
+}
+
+.evaluateList .evaluateItem .leftImg {
+  width: 80rpx;
+  height: 80rpx;
+  border: 2rpx solid #e5e5e5;
+  margin-right: 20rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight {
+  flex: 1;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding-bottom: 20rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight .evaluateName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+}
+
+.evaluateList .evaluateItem .evaluateRight .evaluateName view:first-child {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  flex: 1;
+}
+
+.evaluateList .evaluateItem .evaluateRight .evaluateName view .evaluateStatus {
+  color: #f56f68;
+  font-weight: lighter;
+  font-size: 22rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight .evaluateName view .evaluateStatus image {
+  margin: 0 10rpx 0 20rpx;
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight .evaluateName view:nth-child(2) {
+  color: #999;
+  font-size: 22rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight .evaluateDesc {
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight .grade {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.evaluateList .evaluateItem .evaluateRight .grade view {
+  display: flex;
+  align-items: center;
+}
+
+.evaluateList .evaluateItem .evaluateRight .grade view:first-child {
+  margin-right: 20rpx;
+}
+
+/* 服务项目 */
+
+.project-item {
+  margin: 18rpx 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.project-item  image {
+  width: 140rpx;
+  height: 140rpx;
+  background-color: aqua;
+}
+
+.item-right {
+  margin-left: 16rpx;
+  position: relative;
+  flex: 1;
+}
+
+.item-right .title {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.item-right .content {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 14rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.item-right .price {
+  font-size: 26rpx;
+  color: red;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.worksImg{
+  height: 100%;
+  width: 100%;
+}
+
+.share {
+  z-index: 3;
+  font-size: 30rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  width: 80rpx;
+  border-radius: 50%;
+  color: white;
+  background: #F56F68;
+}
+.alertQcode {
+  z-index: 5;
+  transition: 0.5s;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  width: 0%;
+  height: 0%;
+  overflow: hidden;
+  padding: 20rpx 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.alertQcode .info_f {
+  text-align: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.alertQcode .info_f .van-button {
+  background: #F56F68;
+  width: 50%;
+  color: white;
+  border: none;
+}
+.alertQcode .img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.alertQcode .img image {
+  max-width: 100%;
+  height: 100%;
+}
+.alertQcode .exit_c {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5rpx 30rpx;
+  box-sizing: border-box;
+  background: #F56F68;
+  color: white;
+}
+.Qcode {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
